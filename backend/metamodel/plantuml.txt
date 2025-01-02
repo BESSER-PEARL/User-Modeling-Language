@@ -1,0 +1,53 @@
+@startuml
+class User {
+name: str
+}
+
+abstract class StaticProperty {
+}
+
+class PersonalInformation {
+name: str
+address: str
+gender: str
+}
+
+class Age {
+value: int
+}
+
+class KnownLanguage {
+name: str
+level: CEFR
+}
+
+enum CEFR {
+A1
+A2
+B1
+B2
+C1
+C2
+}
+
+class Nationality {
+name: str
+}
+
+class Hobby {
+name: str
+}
+
+class Interest {
+name: str
+}
+
+User *-- "*" PersonalInformation: has_personalInformation
+
+StaticProperty <|-- PersonalInformation
+PersonalInformation *-- "1"  Age: has_age
+PersonalInformation *-- "*" Hobby: has_hobby
+PersonalInformation *-- "*" KnownLanguage: has_knownLanguage
+PersonalInformation *-- "*" Nationality: has_nationality
+PersonalInformation *-- "*" Interest: has_interest
+@enduml
