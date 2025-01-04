@@ -8,9 +8,9 @@ logging.getLogger("streamlit").setLevel(logging.ERROR)
 
 # Define your Streamlit app
 def user_model_forms():
-    st.title("Userr Model Streamlit App")
+    st.title("User Model Streamlit App")
 
-    # Expandable Personal Information Section
+    # Expandable Demographic Information Section
     with st.expander("Personal Information"):
         st.subheader("Personal Information")
         first_name = st.text_input("First Name")
@@ -705,5 +705,5 @@ def user_model_forms():
         st.rerun()
 
 
-#if __name__ == "__main__":
-   # main()
+if __name__ == "__main__":
+   user_model_forms()
