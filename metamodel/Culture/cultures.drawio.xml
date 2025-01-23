@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0" scale="1" border="0" version="26.0.7">
+  <diagram name="Page-1" id="-BGELX6BxBwbzQ59-9Gc">
+    <mxGraphModel dx="139" dy="514" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0D7c35mzPN8jN4naNa4Q-12" value="Culture" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=17;" parent="1" vertex="1">
+          <mxGeometry x="870" y="410" width="350" height="212" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0D7c35mzPN8jN4naNa4Q-13" value="+ feminity_to_masculinity: Range[0..1]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" parent="0D7c35mzPN8jN4naNa4Q-12" vertex="1">
+          <mxGeometry y="26" width="350" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="0D7c35mzPN8jN4naNa4Q-14" value="+ collectivism_to_individualism: Range[0..1]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" parent="0D7c35mzPN8jN4naNa4Q-12" vertex="1">
+          <mxGeometry y="50" width="350" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="0D7c35mzPN8jN4naNa4Q-15" value="+ powerDistance: Range[0..1]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" parent="0D7c35mzPN8jN4naNa4Q-12" vertex="1">
+          <mxGeometry y="76" width="350" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="0D7c35mzPN8jN4naNa4Q-16" value="+ uncertaintyAvoidance: Range[0..1]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" parent="0D7c35mzPN8jN4naNa4Q-12" vertex="1">
+          <mxGeometry y="102" width="350" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="0D7c35mzPN8jN4naNa4Q-17" value="+ temporalOrientation: Range[0..1]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" parent="0D7c35mzPN8jN4naNa4Q-12" vertex="1">
+          <mxGeometry y="126" width="350" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="0D7c35mzPN8jN4naNa4Q-18" value="&lt;div&gt;+ restrain_to_indulgence: Range[0..1]&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" parent="0D7c35mzPN8jN4naNa4Q-12" vertex="1">
+          <mxGeometry y="152" width="350" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="RTdH0newYg5VPFn8-l-D-7" value="&lt;div&gt;+ religion: ReligionEnum[0..1]&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" parent="0D7c35mzPN8jN4naNa4Q-12" vertex="1">
+          <mxGeometry y="178" width="350" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="0D7c35mzPN8jN4naNa4Q-19" value="" style="line;html=1;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;fontSize=17;" parent="0D7c35mzPN8jN4naNa4Q-12" vertex="1">
+          <mxGeometry y="204" width="350" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="RTdH0newYg5VPFn8-l-D-1" value="&lt;&lt;enumeration&gt;&gt;&#xa;ReligionEnum" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;fontSize=17;" parent="1" vertex="1">
+          <mxGeometry x="930" y="690" width="290" height="232" as="geometry">
+            <mxRectangle x="130" y="380" width="160" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RTdH0newYg5VPFn8-l-D-2" value="Christianity" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" parent="RTdH0newYg5VPFn8-l-D-1" vertex="1">
+          <mxGeometry y="50" width="290" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="RTdH0newYg5VPFn8-l-D-3" value="Islam" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" parent="RTdH0newYg5VPFn8-l-D-1" vertex="1">
+          <mxGeometry y="76" width="290" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="RTdH0newYg5VPFn8-l-D-4" value="Irreligion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" parent="RTdH0newYg5VPFn8-l-D-1" vertex="1">
+          <mxGeometry y="102" width="290" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TIHKmTkI96wsO-lDAfUu-3" value="Hinduism" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="RTdH0newYg5VPFn8-l-D-1">
+          <mxGeometry y="128" width="290" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TIHKmTkI96wsO-lDAfUu-4" value="Buddhism" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="RTdH0newYg5VPFn8-l-D-1">
+          <mxGeometry y="154" width="290" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TIHKmTkI96wsO-lDAfUu-5" value="Folk Religion" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="RTdH0newYg5VPFn8-l-D-1">
+          <mxGeometry y="180" width="290" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="TIHKmTkI96wsO-lDAfUu-6" value="Other" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="RTdH0newYg5VPFn8-l-D-1">
+          <mxGeometry y="206" width="290" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
