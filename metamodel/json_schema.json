@@ -3,51 +3,6 @@
     "title": "Generated JSON Schema",
     "type": "object",
     "properties": {
-        "Cognitive": {
-            "allOf": [{
-                "type": "object",
-                "properties": {
-                    "languageProduction": {
-                        "type": "integer"
-                    },
-                    "physiologicalArousal": {
-                        "type": "integer"
-                    },
-                    "ICTLiteracy": {
-                        "type": "integer"
-                    },
-                    "valence": {
-                        "type": "integer"
-                    },
-                    "ProcessingSpeed": {
-                        "type": "integer"
-                    },
-                    "languageReception": {
-                        "type": "integer"
-                    },
-                    "understandingAbstractSigns": {
-                        "type": "integer"
-                    },
-                    "visuospatialAbilities": {
-                        "type": "integer"
-                    },
-                    "ICTAnxiousness": {
-                        "type": "integer"
-                    },
-                    "trailMakingTest": {
-                        "type": "integer"
-                    },
-                    "neuroCognitivePerformanceTest": {
-                        "type": "string"
-                    },
-                    "emotionalIntelligence": {
-                        "type": "integer"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
         "forearm": {
             "allOf": [{
                 "type": "object",
@@ -67,10 +22,10 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "pronation": {
+                    "supination": {
                         "type": "integer"
                     },
-                    "supination": {
+                    "pronation": {
                         "type": "integer"
                     },
                     "finger_end": {
@@ -103,17 +58,20 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "blindSpotCount": {
-                        "type": "integer"
-                    },
-                    "distorsion": {
+                    "spectralSensitivity": {
                         "type": "number"
                     },
                     "visualAcuity": {
                         "type": "number"
                     },
-                    "nearVisualAcuity": {
+                    "blindSpotSize": {
                         "type": "number"
+                    },
+                    "distorsion": {
+                        "type": "number"
+                    },
+                    "blindSpotCount": {
+                        "type": "integer"
                     },
                     "blindSpotArea": {
                         "type": "number"
@@ -121,19 +79,16 @@
                     "colorBlindness": {
                         "$ref": "#/definitions/ColorBlindnessEnum"
                     },
-                    "contrastSensitivity": {
+                    "nearVisualAcuity": {
                         "type": "number"
                     },
-                    "glareSensitivity": {
+                    "contrastSensitivity": {
                         "type": "number"
                     },
                     "blindSpotOpacity": {
                         "type": "integer"
                     },
-                    "spectralSensitivity": {
-                        "type": "number"
-                    },
-                    "blindSpotSize": {
+                    "glareSensitivity": {
                         "type": "number"
                     }
                 },
@@ -145,17 +100,17 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "extensionForce": {
-                        "type": "integer"
-                    },
                     "flexionForce": {
                         "type": "integer"
                     },
-                    "flexion_end": {
-                        "$ref": "#/definitions/flexion"
+                    "extensionForce": {
+                        "type": "integer"
                     },
                     "hyperExtension_end": {
                         "$ref": "#/definitions/hyperExtension"
+                    },
+                    "flexion_end": {
+                        "$ref": "#/definitions/flexion"
                     }
                 },
                 "required": [
@@ -166,13 +121,13 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "bicepsCircumferenceRelaxedInMeters": {
+                    "shoulderElbowLengthInMeters": {
                         "type": "number"
                     },
                     "bicepsCircumferenceFlexedInMeters": {
                         "type": "number"
                     },
-                    "shoulderElbowLengthInMeters": {
+                    "bicepsCircumferenceRelaxedInMeters": {
                         "type": "number"
                     },
                     "forarmLengthInMeters": {
@@ -187,6 +142,9 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "hearingAt500Hz": {
+                        "type": "integer"
+                    },
                     "hearingAt4kHz": {
                         "type": "integer"
                     },
@@ -200,9 +158,6 @@
                         "type": "integer"
                     },
                     "hearingAt250Hz": {
-                        "type": "integer"
-                    },
-                    "hearingAt500Hz": {
                         "type": "integer"
                     }
                 },
@@ -229,14 +184,14 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "name": {
+                        "type": "string"
+                    },
                     "description": {
                         "type": "string"
                     },
                     "affects": {
                         "$ref": "#/definitions/AspectsEnum"
-                    },
-                    "name": {
-                        "type": "string"
                     }
                 },
                 "required": [
@@ -313,31 +268,31 @@
                     "extensionB": {
                         "type": "integer"
                     },
+                    "adductionA": {
+                        "type": "integer"
+                    },
                     "hyperExtensionB": {
-                        "type": "integer"
-                    },
-                    "abductionB": {
-                        "type": "integer"
-                    },
-                    "adductionB": {
-                        "type": "integer"
-                    },
-                    "hyperExtensionC": {
-                        "type": "integer"
-                    },
-                    "extensionA": {
-                        "type": "integer"
-                    },
-                    "hyperExtensionA": {
-                        "type": "integer"
-                    },
-                    "flexionC": {
                         "type": "integer"
                     },
                     "flexionA": {
                         "type": "integer"
                     },
-                    "adductionA": {
+                    "flexionC": {
+                        "type": "integer"
+                    },
+                    "adductionB": {
+                        "type": "integer"
+                    },
+                    "hyperExtensionA": {
+                        "type": "integer"
+                    },
+                    "extensionA": {
+                        "type": "integer"
+                    },
+                    "abductionB": {
+                        "type": "integer"
+                    },
+                    "hyperExtensionC": {
                         "type": "integer"
                     },
                     "flexionB": {
@@ -361,11 +316,11 @@
                     "internalRotation": {
                         "type": "integer"
                     },
-                    "flexion_end": {
-                        "$ref": "#/definitions/flexion"
-                    },
                     "extension_end": {
                         "$ref": "#/definitions/extension"
+                    },
+                    "flexion_end": {
+                        "$ref": "#/definitions/flexion"
                     }
                 },
                 "required": [
@@ -391,25 +346,25 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "sittingHeightInMeters": {
+                        "type": "number"
+                    },
                     "headLengthInMeters": {
-                        "type": "number"
-                    },
-                    "bideltoidBreadthInMeters": {
-                        "type": "number"
-                    },
-                    "waistCircumferenceInMeters": {
                         "type": "number"
                     },
                     "weightInKg": {
                         "type": "number"
                     },
-                    "statureInMeters": {
+                    "waistCircumferenceInMeters": {
+                        "type": "number"
+                    },
+                    "bideltoidBreadthInMeters": {
                         "type": "number"
                     },
                     "headBreadthInMeters": {
                         "type": "number"
                     },
-                    "sittingHeightInMeters": {
+                    "statureInMeters": {
                         "type": "number"
                     },
                     "lowerLimbAnthropometric_end": {
@@ -469,13 +424,10 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "fatigue": {
-                        "type": "integer"
+                    "temperature": {
+                        "type": "number"
                     },
-                    "nourishment": {
-                        "type": "integer"
-                    },
-                    "injury": {
+                    "arousal": {
                         "type": "boolean"
                     },
                     "bloodPressure": {
@@ -484,19 +436,22 @@
                     "perspiration": {
                         "type": "integer"
                     },
+                    "nourishment": {
+                        "type": "integer"
+                    },
+                    "fatigue": {
+                        "type": "integer"
+                    },
+                    "heartbeat": {
+                        "type": "integer"
+                    },
+                    "injury": {
+                        "type": "boolean"
+                    },
                     "pupilsDilation": {
                         "type": "integer"
                     },
                     "respiration": {
-                        "type": "integer"
-                    },
-                    "temperature": {
-                        "type": "number"
-                    },
-                    "arousal": {
-                        "type": "boolean"
-                    },
-                    "heartbeat": {
                         "type": "integer"
                     }
                 },
@@ -508,28 +463,28 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "hipBreadthInMeters": {
+                    "ankleHeightInMeters": {
                         "type": "number"
                     },
                     "kneeHeightInMeters": {
                         "type": "number"
                     },
-                    "calfCirumferenceInMeters": {
+                    "footBreadthInMeters": {
                         "type": "number"
                     },
                     "buttockKneeInMeters": {
                         "type": "number"
                     },
+                    "hipBreadthInMeters": {
+                        "type": "number"
+                    },
                     "footLengthInMeters": {
                         "type": "number"
                     },
-                    "ankleHeightInMeters": {
+                    "calfCirumferenceInMeters": {
                         "type": "number"
                     },
                     "tighCircumferenceInMeters": {
-                        "type": "number"
-                    },
-                    "footBreadthInMeters": {
                         "type": "number"
                     }
                 },
@@ -541,22 +496,22 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "handEyeCoordination": {
+                        "type": "integer"
+                    },
                     "fingerPrecision": {
                         "type": "integer"
                     },
                     "pinchGrip": {
                         "type": "number"
                     },
+                    "clenchGrip": {
+                        "type": "number"
+                    },
                     "armPrecision": {
                         "type": "integer"
                     },
                     "handPrecision": {
-                        "type": "integer"
-                    },
-                    "clenchGrip": {
-                        "type": "number"
-                    },
-                    "handEyeCoordination": {
                         "type": "integer"
                     },
                     "contactGrip": {
@@ -589,11 +544,11 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "Phonation_end": {
-                        "$ref": "#/definitions/Phonation"
-                    },
                     "Prosody_end": {
                         "$ref": "#/definitions/Prosody"
+                    },
+                    "Phonation_end": {
+                        "$ref": "#/definitions/Phonation"
                     }
                 },
                 "required": [
@@ -648,60 +603,60 @@
                 ]
             }
         ]},
-        "Accessibility": {
+        "Memory": {
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "Disability_end": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/definitions/Disability"
-                        }
+                    "sensoryMemory": {
+                        "type": "integer"
                     },
-                    "Physiological State_end": {
-                        "$ref": "#/definitions/Physiological State"
+                    "workingMemory": {
+                        "type": "integer"
                     },
-                    "Memory_end": {
-                        "$ref": "#/definitions/Memory"
-                    },
-                    "Mobility_end": {
-                        "$ref": "#/definitions/Mobility"
-                    },
-                    "Hearing_end": {
-                        "$ref": "#/definitions/Hearing"
-                    },
-                    "Sight_end": {
-                        "$ref": "#/definitions/Sight"
-                    },
-                    "Cognitive_end": {
-                        "$ref": "#/definitions/Cognitive"
-                    },
-                    "0..1": {
-                        "$ref": "#/definitions/Anthropometric"
-                    },
-                    "Speech_end": {
-                        "$ref": "#/definitions/Speech"
-                    },
-                    "Motoric_end": {
-                        "$ref": "#/definitions/Motoric"
+                    "longTermMemory": {
+                        "type": "integer"
                     }
                 },
                 "required": [
                 ]
             }
         ]},
-        "Memory": {
+        "Accessibility": {
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "longTermMemory": {
-                        "type": "integer"
+                    "Motoric_end": {
+                        "$ref": "#/definitions/Motoric"
                     },
-                    "sensoryMemory": {
-                        "type": "integer"
+                    "Sight_end": {
+                        "$ref": "#/definitions/Sight"
                     },
-                    "workingMemory": {
-                        "type": "integer"
+                    "Physiological State_end": {
+                        "$ref": "#/definitions/Physiological State"
+                    },
+                    "Disability_end": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/Disability"
+                        }
+                    },
+                    "Mobility_end": {
+                        "$ref": "#/definitions/Mobility"
+                    },
+                    "Memory_end": {
+                        "$ref": "#/definitions/Memory"
+                    },
+                    "Hearing_end": {
+                        "$ref": "#/definitions/Hearing"
+                    },
+                    "Cognitive_end": {
+                        "$ref": "#/definitions/Cognitive"
+                    },
+                    "Speech_end": {
+                        "$ref": "#/definitions/Speech"
+                    },
+                    "Anthropometric_end": {
+                        "$ref": "#/definitions/Anthropometric"
                     }
                 },
                 "required": [
@@ -733,11 +688,11 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "level": {
-                        "$ref": "#/definitions/CEFR"
-                    },
                     "iso693_3": {
                         "type": "string"
+                    },
+                    "level": {
+                        "$ref": "#/definitions/CEFR"
                     }
                 },
                 "required": [
@@ -778,14 +733,14 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "degreeName": {
-                        "type": "string"
-                    },
                     "providedBy": {
                         "type": "string"
                     },
                     "degreeType": {
                         "$ref": "#/definitions/DegreeEnum"
+                    },
+                    "degreeName": {
+                        "type": "string"
                     },
                     "fieldOfDegree": {
                         "type": "string"
@@ -838,13 +793,19 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "restrain_to_indulgence": {
+                        "type": "integer"
+                    },
+                    "collectivism_to_individualism": {
+                        "type": "integer"
+                    },
+                    "uncertaintyAvoidance": {
+                        "type": "integer"
+                    },
                     "powerDistance": {
                         "type": "integer"
                     },
                     "feminity_to_masculinity": {
-                        "type": "integer"
-                    },
-                    "uncertaintyAvoidance": {
                         "type": "integer"
                     },
                     "religion": {
@@ -852,29 +813,6 @@
                     },
                     "temporalOrientation": {
                         "type": "integer"
-                    },
-                    "collectivism_to_individualism": {
-                        "type": "integer"
-                    },
-                    "restrain_to_indulgence": {
-                        "type": "integer"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "VideoGames": {
-            "allOf": [
-            { "$ref": "#/definitions/Topic" },
-            {
-                "type": "object",
-                "properties": {
-                    "genres": {
-                        "type": "array",
-                        "items": {
-                        "$ref": "#/definitions/GameGenreEnum"
-                        }
                     }
                 },
                 "required": [
@@ -885,6 +823,9 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "anger": {
+                        "type": "integer"
+                    },
                     "dread": {
                         "type": "integer"
                     },
@@ -938,9 +879,44 @@
                     },
                     "anxiety": {
                         "type": "integer"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Preference": {
+            "allOf": [{
+                "type": "object",
+                "properties": {
+                    "Design_end": {
+                        "$ref": "#/definitions/Design"
                     },
-                    "anger": {
-                        "type": "integer"
+                    "Interaction_Modality_end": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/Interaction_Modality"
+                        }
+                    },
+                    "Content_end": {
+                        "$ref": "#/definitions/Content"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "VideoGames": {
+            "allOf": [
+            { "$ref": "#/definitions/Topic" },
+            {
+                "type": "object",
+                "properties": {
+                    "genres": {
+                        "type": "array",
+                        "items": {
+                        "$ref": "#/definitions/GameGenreEnum"
+                        }
                     }
                 },
                 "required": [
@@ -953,44 +929,6 @@
                 "properties": {
                     "Topic_end": {
                         "$ref": "#/definitions/Topic"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Environment": {
-            "allOf": [
-            { "$ref": "#/definitions/Topic" },
-            {
-                "type": "object",
-                "properties": {
-                    "topics": {
-                        "type": "array",
-                        "items": {
-                        "$ref": "#/definitions/EnvironmentEnum"
-                        }
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Preference": {
-            "allOf": [{
-                "type": "object",
-                "properties": {
-                    "Content_end": {
-                        "$ref": "#/definitions/Content"
-                    },
-                    "Interaction_Modality_end": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/definitions/Interaction_Modality"
-                        }
-                    },
-                    "Design_end": {
-                        "$ref": "#/definitions/Design"
                     }
                 },
                 "required": [
@@ -1021,16 +959,16 @@
                 ]
             }
         ]},
-        "Recreation": {
+        "Environment": {
             "allOf": [
             { "$ref": "#/definitions/Topic" },
             {
                 "type": "object",
                 "properties": {
-                    "types": {
+                    "topics": {
                         "type": "array",
                         "items": {
-                        "$ref": "#/definitions/RecreationEnum"
+                        "$ref": "#/definitions/EnvironmentEnum"
                         }
                     }
                 },
@@ -1045,6 +983,9 @@
                     "politicalBelief": {
                         "$ref": "#/definitions/PoliticalEnum"
                     },
+                    "gender": {
+                        "$ref": "#/definitions/GenderEnum"
+                    },
                     "nationality_iso3166": {
                         "type": "array",
                         "items": {
@@ -1054,6 +995,9 @@
                     "age": {
                         "type": "integer"
                     },
+                    "address": {
+                        "type": "string"
+                    },
                     "lastName": {
                         "type": "string"
                     },
@@ -1062,12 +1006,6 @@
                     },
                     "firstName": {
                         "type": "string"
-                    },
-                    "address": {
-                        "type": "string"
-                    },
-                    "gender": {
-                        "$ref": "#/definitions/GenderEnum"
                     },
                     "Interest_end": {
                         "type": "array",
@@ -1096,10 +1034,10 @@
                             "$ref": "#/definitions/Language"
                         }
                     },
-                    "Skill_end": {
+                    "Knowledge_end": {
                         "type": "array",
                         "items": {
-                            "$ref": "#/definitions/Skill"
+                            "$ref": "#/definitions/Knowledge"
                         }
                     },
                     "Experience_end": {
@@ -1108,11 +1046,45 @@
                             "$ref": "#/definitions/Experience"
                         }
                     },
-                    "Knowledge_end": {
+                    "Skill_end": {
                         "type": "array",
                         "items": {
-                            "$ref": "#/definitions/Knowledge"
+                            "$ref": "#/definitions/Skill"
                         }
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Recreation": {
+            "allOf": [
+            { "$ref": "#/definitions/Topic" },
+            {
+                "type": "object",
+                "properties": {
+                    "types": {
+                        "type": "array",
+                        "items": {
+                        "$ref": "#/definitions/RecreationEnum"
+                        }
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Other": {
+            "allOf": [
+            { "$ref": "#/definitions/Topic" },
+            {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
                     }
                 },
                 "required": [
@@ -1155,11 +1127,11 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "Output_Modality_end": {
-                        "$ref": "#/definitions/Output_Modality"
-                    },
                     "Input_Modality_end": {
                         "$ref": "#/definitions/Input_Modality"
+                    },
+                    "Output_Modality_end": {
+                        "$ref": "#/definitions/Output_Modality"
                     }
                 },
                 "required": [
@@ -1184,6 +1156,9 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "colorScheme": {
+                        "type": "string"
+                    },
                     "contentContrast": {
                         "type": "integer"
                     },
@@ -1195,9 +1170,6 @@
                     },
                     "textSize": {
                         "type": "integer"
-                    },
-                    "colorScheme": {
-                        "type": "string"
                     }
                 },
                 "required": [
@@ -1225,28 +1197,11 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "PreferredLanguage_end": {
-                        "$ref": "#/definitions/PreferredLanguage"
-                    },
                     "*": {
                         "$ref": "#/definitions/Item"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Science": {
-            "allOf": [
-            { "$ref": "#/definitions/Topic" },
-            {
-                "type": "object",
-                "properties": {
-                    "fields": {
-                        "type": "array",
-                        "items": {
-                        "$ref": "#/definitions/ScienceFieldEnum"
-                        }
+                    },
+                    "PreferredLanguage_end": {
+                        "$ref": "#/definitions/PreferredLanguage"
                     }
                 },
                 "required": [
@@ -1259,6 +1214,24 @@
                 "properties": {
                     "value": {
                         "$ref": "#/definitions/InputEnum"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Intraphysic_Self": {
+            "allOf": [{
+                "type": "object",
+                "properties": {
+                    "identityImportance": {
+                        "type": "string"
+                    },
+                    "masteryImportance": {
+                        "type": "string"
+                    },
+                    "securityImportance": {
+                        "type": "string"
                     }
                 },
                 "required": [
@@ -1280,18 +1253,17 @@
                 ]
             }
         ]},
-        "Intraphysic_Self": {
-            "allOf": [{
+        "Science": {
+            "allOf": [
+            { "$ref": "#/definitions/Topic" },
+            {
                 "type": "object",
                 "properties": {
-                    "securityImportance": {
-                        "type": "string"
-                    },
-                    "identityImportance": {
-                        "type": "string"
-                    },
-                    "masteryImportance": {
-                        "type": "string"
+                    "fields": {
+                        "type": "array",
+                        "items": {
+                        "$ref": "#/definitions/ScienceFieldEnum"
+                        }
                     }
                 },
                 "required": [
@@ -1331,38 +1303,14 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "negative_to_positive": {
-                        "type": "integer"
-                    },
                     "description": {
                         "type": "string"
                     },
+                    "negative_to_positive": {
+                        "type": "integer"
+                    },
                     "Topic_end": {
                         "$ref": "#/definitions/Topic"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Mobility": {
-            "allOf": [{
-                "type": "object",
-                "properties": {
-                    "Neck_end": {
-                        "$ref": "#/definitions/Neck"
-                    },
-                    "Gait_end": {
-                        "$ref": "#/definitions/Gait"
-                    },
-                    "right": {
-                        "$ref": "#/definitions/lowerLimb"
-                    },
-                    "left": {
-                        "$ref": "#/definitions/UpperLimp"
-                    },
-                    "spinalColumn_end": {
-                        "$ref": "#/definitions/spinalColumn"
                     }
                 },
                 "required": [
@@ -1373,50 +1321,11 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "score": {
-                        "type": "integer"
-                    },
                     "name": {
                         "$ref": "#/definitions/CharacteristicsEnum"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "UpperLimp": {
-            "allOf": [{
-                "type": "object",
-                "properties": {
-                    "pushForce": {
+                    },
+                    "score": {
                         "type": "integer"
-                    },
-                    "inForce": {
-                        "type": "integer"
-                    },
-                    "elbowTorque": {
-                        "type": "integer"
-                    },
-                    "pullForce": {
-                        "type": "integer"
-                    },
-                    "outForce": {
-                        "type": "integer"
-                    },
-                    "shoulder_end": {
-                        "$ref": "#/definitions/shoulder"
-                    },
-                    "wrist_end": {
-                        "$ref": "#/definitions/wrist"
-                    },
-                    "elbow_end": {
-                        "$ref": "#/definitions/elbow"
-                    },
-                    "forearm_end": {
-                        "$ref": "#/definitions/forearm"
-                    },
-                    "hand_end": {
-                        "$ref": "#/definitions/hand"
                     }
                 },
                 "required": [
@@ -1441,25 +1350,6 @@
                 ]
             }
         ]},
-        "Other": {
-            "allOf": [
-            { "$ref": "#/definitions/Topic" },
-            
-            { "$ref": "#/definitions/Trait" },
-            {
-                "type": "object",
-                "properties": {
-                    "description": {
-                        "type": "string"
-                    },
-                    "name": {
-                        "type": "string"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
         "Big_Five_Traits": {
             "allOf": [
             { "$ref": "#/definitions/Trait" },
@@ -1471,40 +1361,7 @@
                 ]
             }
         ]},
-        "Openness": {
-            "allOf": [
-            { "$ref": "#/definitions/Big_Five_Traits" },
-            {
-                "type": "object",
-                "properties": {
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Extraversion": {
-            "allOf": [
-            { "$ref": "#/definitions/Big_Five_Traits" },
-            {
-                "type": "object",
-                "properties": {
-                },
-                "required": [
-                ]
-            }
-        ]},
         "Agreeableness": {
-            "allOf": [
-            { "$ref": "#/definitions/Big_Five_Traits" },
-            {
-                "type": "object",
-                "properties": {
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Neuroticism": {
             "allOf": [
             { "$ref": "#/definitions/Big_Five_Traits" },
             {
@@ -1526,9 +1383,9 @@
                 ]
             }
         ]},
-        "MyersBriggsTypeInventory": {
+        "Openness": {
             "allOf": [
-            { "$ref": "#/definitions/Trait" },
+            { "$ref": "#/definitions/Big_Five_Traits" },
             {
                 "type": "object",
                 "properties": {
@@ -1537,9 +1394,31 @@
                 ]
             }
         ]},
-        "JudgingToPerceiving": {
+        "Neuroticism": {
             "allOf": [
-            { "$ref": "#/definitions/MyersBriggsTypeInventory" },
+            { "$ref": "#/definitions/Big_Five_Traits" },
+            {
+                "type": "object",
+                "properties": {
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Extraversion": {
+            "allOf": [
+            { "$ref": "#/definitions/Big_Five_Traits" },
+            {
+                "type": "object",
+                "properties": {
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "MyersBriggsTypeInventory": {
+            "allOf": [
+            { "$ref": "#/definitions/Trait" },
             {
                 "type": "object",
                 "properties": {
@@ -1570,12 +1449,37 @@
                 ]
             }
         ]},
+        "JudgingToPerceiving": {
+            "allOf": [
+            { "$ref": "#/definitions/MyersBriggsTypeInventory" },
+            {
+                "type": "object",
+                "properties": {
+                },
+                "required": [
+                ]
+            }
+        ]},
         "ExtraversionToIntroversion": {
             "allOf": [
             { "$ref": "#/definitions/MyersBriggsTypeInventory" },
             {
                 "type": "object",
                 "properties": {
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "OtherTrait": {
+            "allOf": [
+            { "$ref": "#/definitions/Trait" },
+            {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    }
                 },
                 "required": [
                 ]
@@ -1588,11 +1492,35 @@
                     "Instrumental_end": {
                         "$ref": "#/definitions/Instrumental_Material_World"
                     },
-                    "Interpersonal_end": {
-                        "$ref": "#/definitions/Interpersonal_Social_World"
-                    },
                     "Intraphysic_end": {
                         "$ref": "#/definitions/Intraphysic_Self"
+                    },
+                    "Interpersonal_end": {
+                        "$ref": "#/definitions/Interpersonal_Social_World"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Mobility": {
+            "allOf": [{
+                "type": "object",
+                "properties": {
+                    "left": {
+                        "$ref": "#/definitions/UpperLimp"
+                    },
+                    "spinalColumn_end": {
+                        "$ref": "#/definitions/spinalColumn"
+                    },
+                    "right": {
+                        "$ref": "#/definitions/lowerLimb"
+                    },
+                    "Neck_end": {
+                        "$ref": "#/definitions/Neck"
+                    },
+                    "Gait_end": {
+                        "$ref": "#/definitions/Gait"
                     }
                 },
                 "required": [
@@ -1605,45 +1533,6 @@
             {
                 "type": "object",
                 "properties": {
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Gait": {
-            "allOf": [{
-                "type": "object",
-                "properties": {
-                    "stepAssymetry": {
-                        "type": "integer"
-                    },
-                    "stepWidthInMeters": {
-                        "type": "number"
-                    },
-                    "cadence": {
-                        "type": "integer"
-                    },
-                    "doubleSupport": {
-                        "type": "integer"
-                    },
-                    "weightShift": {
-                        "type": "integer"
-                    },
-                    "velocity": {
-                        "type": "integer"
-                    },
-                    "strideLengthInMeters": {
-                        "type": "number"
-                    },
-                    "footContact": {
-                        "type": "integer"
-                    },
-                    "gaitCycle": {
-                        "type": "integer"
-                    },
-                    "stepLengthInMeters": {
-                        "type": "number"
-                    }
                 },
                 "required": [
                 ]
@@ -1667,18 +1556,39 @@
                 ]
             }
         ]},
-        "Phonation": {
+        "UpperLimp": {
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "syllableDuration": {
-                        "type": "number"
+                    "outForce": {
+                        "type": "integer"
                     },
-                    "voicePitch": {
-                        "type": "number"
+                    "pushForce": {
+                        "type": "integer"
                     },
-                    "fundamentalFrequency": {
-                        "type": "number"
+                    "inForce": {
+                        "type": "integer"
+                    },
+                    "pullForce": {
+                        "type": "integer"
+                    },
+                    "elbowTorque": {
+                        "type": "integer"
+                    },
+                    "forearm_end": {
+                        "$ref": "#/definitions/forearm"
+                    },
+                    "hand_end": {
+                        "$ref": "#/definitions/hand"
+                    },
+                    "shoulder_end": {
+                        "$ref": "#/definitions/shoulder"
+                    },
+                    "wrist_end": {
+                        "$ref": "#/definitions/wrist"
+                    },
+                    "elbow_end": {
+                        "$ref": "#/definitions/elbow"
                     }
                 },
                 "required": [
@@ -1689,10 +1599,10 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "belongingImportance": {
+                    "esteemImportance": {
                         "type": "integer"
                     },
-                    "esteemImportance": {
+                    "belongingImportance": {
                         "type": "integer"
                     },
                     "nurturanceImportance": {
@@ -1703,26 +1613,83 @@
                 ]
             }
         ]},
+        "Gait": {
+            "allOf": [{
+                "type": "object",
+                "properties": {
+                    "doubleSupport": {
+                        "type": "integer"
+                    },
+                    "gaitCycle": {
+                        "type": "integer"
+                    },
+                    "stepLengthInMeters": {
+                        "type": "number"
+                    },
+                    "velocity": {
+                        "type": "integer"
+                    },
+                    "strideLengthInMeters": {
+                        "type": "number"
+                    },
+                    "stepWidthInMeters": {
+                        "type": "number"
+                    },
+                    "cadence": {
+                        "type": "integer"
+                    },
+                    "stepAssymetry": {
+                        "type": "integer"
+                    },
+                    "weightShift": {
+                        "type": "integer"
+                    },
+                    "footContact": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Phonation": {
+            "allOf": [{
+                "type": "object",
+                "properties": {
+                    "voicePitch": {
+                        "type": "number"
+                    },
+                    "fundamentalFrequency": {
+                        "type": "number"
+                    },
+                    "syllableDuration": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
         "hip": {
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "internalRotation": {
+                        "type": "integer"
+                    },
                     "extensionTorque": {
-                        "type": "integer"
-                    },
-                    "adduction": {
-                        "type": "integer"
-                    },
-                    "flexionTorque": {
-                        "type": "integer"
-                    },
-                    "abduction": {
                         "type": "integer"
                     },
                     "externalRotation": {
                         "type": "integer"
                     },
-                    "internalRotation": {
+                    "abduction": {
+                        "type": "integer"
+                    },
+                    "flexionTorque": {
+                        "type": "integer"
+                    },
+                    "adduction": {
                         "type": "integer"
                     },
                     "flexion_end": {
@@ -1749,20 +1716,71 @@
                     "ankleDorsiFlexion": {
                         "type": "integer"
                     },
-                    "thigh_end": {
-                        "$ref": "#/definitions/thigh"
-                    },
-                    "wrist_end": {
-                        "$ref": "#/definitions/wrist"
-                    },
                     "toe_end": {
                         "type": "array",
                         "items": {
                             "$ref": "#/definitions/toe"
                         }
                     },
+                    "wrist_end": {
+                        "$ref": "#/definitions/wrist"
+                    },
                     "hip_end": {
                         "$ref": "#/definitions/hip"
+                    },
+                    "thigh_end": {
+                        "$ref": "#/definitions/thigh"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Cognitive": {
+            "allOf": [{
+                "type": "object",
+                "properties": {
+                    "ICTAnxiousness": {
+                        "type": "integer"
+                    },
+                    "neuroCognitivePerformanceTest": {
+                        "type": "string"
+                    },
+                    "ICTLiteracy": {
+                        "type": "integer"
+                    },
+                    "emotionalIntelligence": {
+                        "type": "integer"
+                    },
+                    "physiologicalArousal": {
+                        "type": "integer"
+                    },
+                    "visuospatialAbilities": {
+                        "type": "integer"
+                    },
+                    "languageProduction": {
+                        "type": "integer"
+                    },
+                    "languageReception": {
+                        "type": "integer"
+                    },
+                    "ProcessingSpeed": {
+                        "type": "integer"
+                    },
+                    "valence": {
+                        "type": "integer"
+                    },
+                    "understandingAbstractSigns": {
+                        "type": "integer"
+                    },
+                    "trailMakingTest": {
+                        "type": "integer"
+                    },
+                    "EmotionalIntelligence_end": {
+                        "$ref": "#/definitions/EmotionalIntelligence"
+                    },
+                    "Attention_end": {
+                        "$ref": "#/definitions/Attention"
                     }
                 },
                 "required": [
@@ -1771,6 +1789,456 @@
         ]}
     },
     "definitions": {
+        "OutputEnum": {
+            "type": "string",
+            "enum": [
+                "text", 
+                "image", 
+                "audio", 
+                "video"
+            ]
+        },
+        "MusicGenreEnum": {
+            "type": "string",
+            "enum": [
+                "Hymns", 
+                "Karaoke", 
+                "WesternSwing", 
+                "Quartets", 
+                "SymphonyOrchestras", 
+                "Children", 
+                "Opera", 
+                "RaveCulture", 
+                "Blues", 
+                "Dance", 
+                "Jewish", 
+                "Celtic", 
+                "HeavyMetal", 
+                "Indian", 
+                "Religion", 
+                "Concerts", 
+                "Psychedelic", 
+                "ChoralMusic", 
+                "Electronic", 
+                "Reggae", 
+                "Improvisation", 
+                "Composers", 
+                "Lyrics", 
+                "WorldMusic", 
+                "NewAge", 
+                "Musicals", 
+                "Country", 
+                "Folk", 
+                "Popular", 
+                "Ragtime", 
+                "Rap", 
+                "Rhythm-n-Blues", 
+                "HumorAndComedy", 
+                "Classical", 
+                "Hip-Hop", 
+                "Jazz", 
+                "MusicalInstruments", 
+                "Rock", 
+                "PunkRock"
+            ]
+        },
+        "StylesEnum": {
+            "type": "string",
+            "enum": [
+                "informal", 
+                "formal"
+            ]
+        },
+        "TraitsEnum": {
+            "type": "string",
+            "enum": [
+                "Sensing", 
+                "Openminded", 
+                "Agreeable", 
+                "Perceiving", 
+                "Judging", 
+                "Controlled", 
+                "Excessive", 
+                "Feeling", 
+                "Disagreeable", 
+                "Intelligent", 
+                "Pessimistic", 
+                "Extravert", 
+                "Introvert", 
+                "Neurotic", 
+                "Optimistic", 
+                "Resilient", 
+                "Closeminded", 
+                "Indulgent", 
+                "Tempered", 
+                "Thinking"
+            ]
+        },
+        "DegreeEnum": {
+            "type": "string",
+            "enum": [
+                "Doctorate's degree", 
+                "Bachelor's degree", 
+                "Certificate", 
+                "Master's degree", 
+                "High-school diploma"
+            ]
+        },
+        "RecreationEnum": {
+            "type": "string",
+            "enum": [
+                "Games", 
+                "Collecting", 
+                "RailroadModels", 
+                "CardTricks", 
+                "Pets", 
+                "Fireworks", 
+                "Cycling", 
+                "JigsawPuzzles", 
+                "Photography", 
+                "Circus", 
+                "Museums", 
+                "Puppets", 
+                "Radio", 
+                "Gardening", 
+                "Festivals", 
+                "Aquariums", 
+                "Beaches", 
+                "Books", 
+                "Juggling", 
+                "BirdWatching", 
+                "Humor", 
+                "Fairs", 
+                "Kites", 
+                "Camping", 
+                "Television", 
+                "Rafting", 
+                "WordGames", 
+                "CrosswordPuzzles", 
+                "Toys", 
+                "Movies", 
+                "Backpacking", 
+                "Fortune-telling", 
+                "Lotteries", 
+                "Hiking", 
+                "Gambling", 
+                "Fishing", 
+                "Hunting", 
+                "MagicTricks", 
+                "Crafts", 
+                "Dance", 
+                "Zoos", 
+                "ArtGalleries"
+            ]
+        },
+        "ScienceFieldEnum": {
+            "type": "string",
+            "enum": [
+                "Inventions", 
+                "Weather", 
+                "Archaeology", 
+                "Medicine", 
+                "Plants", 
+                "Ontologies", 
+                "NobelPrizes", 
+                "UbiquitousComputing", 
+                "UserModeling", 
+                "Taxonomy", 
+                "Cloning", 
+                "Genetics", 
+                "Mathematics", 
+                "Expeditions", 
+                "Microorganisms", 
+                "Zoology", 
+                "Physics", 
+                "HumanGenome", 
+                "Scientists", 
+                "Technology", 
+                "NatureSounds", 
+                "Standardization", 
+                "Biology", 
+                "Animals", 
+                "Botany", 
+                "Geography", 
+                "Psychology", 
+                "ComputerScience", 
+                "NuclearEnergy", 
+                "LifeSciences", 
+                "Agriculture", 
+                "Molecules", 
+                "Geology", 
+                "PhysicalSciences", 
+                "SemanticWeb", 
+                "Astronomy", 
+                "Evolution", 
+                "Anthropology", 
+                "Chemistry", 
+                "Environment"
+            ]
+        },
+        "ReligionEnum": {
+            "type": "string",
+            "enum": [
+                "Buddhism", 
+                "Hinduism", 
+                "Christianity", 
+                "Irreligion", 
+                "Islam", 
+                "Other", 
+                "Folk Religion"
+            ]
+        },
+        "SexualityEnum": {
+            "type": "string",
+            "enum": [
+                "Other", 
+                "Heterosexual", 
+                "Pansexual", 
+                "Homosexual", 
+                "Asexual", 
+                "Bisexual"
+            ]
+        },
+        "AspectsEnum": {
+            "type": "string",
+            "enum": [
+                "Hearing", 
+                "Social Relationships", 
+                "Cognitive", 
+                "Sight", 
+                "Learning", 
+                "Mental Health", 
+                "Speech", 
+                "Mobility", 
+                "Memory"
+            ]
+        },
+        "CharacteristicsEnum": {
+            "type": "string",
+            "enum": [
+                "Warm", 
+                "Cooperative", 
+                "Quiet", 
+                "Commonplace", 
+                "Retiring", 
+                "Anxious", 
+                "Assertive", 
+                "Imaginative", 
+                "Efficient", 
+                "Helpful", 
+                "Loyal", 
+                "Shy", 
+                "Worrying", 
+                "Stable", 
+                "Dominant", 
+                "Organised", 
+                "Faultfinding", 
+                "Reserved", 
+                "Moody", 
+                "Thorough", 
+                "Calm", 
+                "Talkative", 
+                "Frivolous", 
+                "Sympathetic", 
+                "Reliable", 
+                "Unfriendly", 
+                "Careless", 
+                "Tense", 
+                "Inventive", 
+                "Disorderly", 
+                "Artistic", 
+                "Cold", 
+                "Kind", 
+                "Contended"
+            ]
+        },
+        "GenderEnum": {
+            "type": "string",
+            "enum": [
+                "Male", 
+                "Female", 
+                "Other"
+            ]
+        },
+        "GameGenreEnum": {
+            "type": "string",
+            "enum": [
+                "Children", 
+                "Adventure", 
+                "Puzzle", 
+                "Arcade", 
+                "Fighting", 
+                "BoardGames", 
+                "Simulation", 
+                "Action", 
+                "Platform", 
+                "Racing", 
+                "Strategy", 
+                "Sports", 
+                "Shoot-Em-Up"
+            ]
+        },
+        "PoliticalEnum": {
+            "type": "string",
+            "enum": [
+                "Sligthly Liberal", 
+                "Conservative", 
+                "Neutral", 
+                "Extremely Conservative", 
+                "Liberal", 
+                "Sligthly Conservative", 
+                "Extremely Liberal"
+            ]
+        },
+        "ColorBlindnessEnum": {
+            "type": "string",
+            "enum": [
+                "Tritanopia", 
+                "Achromatopsia", 
+                "Rod Monochromacy", 
+                "Protanomaly", 
+                "Protanopia", 
+                "Deuteranopia", 
+                "Tritanomaly", 
+                "Deuteranomaly"
+            ]
+        },
+        "InputEnum": {
+            "type": "string",
+            "enum": [
+                "text", 
+                "voice", 
+                "video", 
+                "click", 
+                "image"
+            ]
+        },
+        "EnvironmentEnum": {
+            "type": "string",
+            "enum": [
+                "RainForests", 
+                "EnvironmentalEducation", 
+                "Windpower", 
+                "Weather", 
+                "Fire", 
+                "EndangeredSpecies", 
+                "HazardousWastes", 
+                "Protection", 
+                "RenewableEnergy", 
+                "Habitat", 
+                "NuclearEnergy", 
+                "SolarEnergy", 
+                "DesertsAndDesertification", 
+                "EnvironmentalHealth", 
+                "BiologicalDiversity", 
+                "Recycling", 
+                "PestsAndDiseases", 
+                "LightPollution", 
+                "Wetlands", 
+                "RadioactiveWaste", 
+                "Disasters", 
+                "Pesticides", 
+                "CoralReefs", 
+                "Littering", 
+                "NoisePollution", 
+                "ForestsAndDeforestation", 
+                "RuralDevelopment", 
+                "NaturalHistory", 
+                "WildlifeConservation", 
+                "Toxicology", 
+                "PetroleumIndustry", 
+                "Water", 
+                "AirPollution", 
+                "FuelCells", 
+                "HazardousSubstances", 
+                "EnergyConservation", 
+                "Ponds", 
+                "ClimaticChangesAndGlobalWarming", 
+                "GovernmentPolicy", 
+                "IndustrialSafety"
+            ]
+        },
+        "FilmGenreEnum": {
+            "type": "string",
+            "enum": [
+                "Drama", 
+                "Adventure", 
+                "Westerns", 
+                "Comedy", 
+                "Musicals", 
+                "Documentary", 
+                "Soaps", 
+                "Animation", 
+                "War", 
+                "Classics", 
+                "ScienceFiction", 
+                "Horror", 
+                "Action", 
+                "Television", 
+                "SportsAndExercise", 
+                "Thriller", 
+                "Independent", 
+                "Romance", 
+                "MartialArts", 
+                "Crime", 
+                "MusicAndConcert", 
+                "Fantasy", 
+                "Other", 
+                "Mystery", 
+                "ChildrenAndFamily"
+            ]
+        },
+        "SportEnum": {
+            "type": "string",
+            "enum": [
+                "IceSkating", 
+                "Skydiving", 
+                "Skateboarding", 
+                "Olympics", 
+                "WinterSports", 
+                "AutomobileRacing", 
+                "Climbing", 
+                "Karting", 
+                "Triathlon", 
+                "Wrestling", 
+                "Softball", 
+                "Soccer", 
+                "FieldHockey", 
+                "Luge", 
+                "Fencing", 
+                "Boomerangs", 
+                "FlyingDiscs", 
+                "Motorcycles", 
+                "Swimming", 
+                "Surfing", 
+                "Cycling", 
+                "Football", 
+                "Tennis", 
+                "Boating", 
+                "Baseball", 
+                "Rodeos", 
+                "Running", 
+                "HorseRacing", 
+                "Basketball", 
+                "Gymnastics", 
+                "Cricket", 
+                "TableTennis", 
+                "Chess", 
+                "Boxing", 
+                "Hockey", 
+                "Sailing", 
+                "Skating", 
+                "ScubaDiving", 
+                "Skiing", 
+                "Athletics", 
+                "Golf", 
+                "Bowling", 
+                "IceHockey", 
+                "Volleyball", 
+                "Badminton", 
+                "Windsurfing"
+            ]
+        },
         "CEFR": {
             "type": "string",
             "enum": [
@@ -1782,502 +2250,6 @@
                 "A2"
             ]
         },
-        "MusicGenreEnum": {
-            "type": "string",
-            "enum": [
-                "Ragtime", 
-                "Karaoke", 
-                "HeavyMetal", 
-                "Quartets", 
-                "SymphonyOrchestras", 
-                "WesternSwing", 
-                "Children", 
-                "RaveCulture", 
-                "Jewish", 
-                "Opera", 
-                "Dance", 
-                "Celtic", 
-                "Religion", 
-                "Indian", 
-                "Concerts", 
-                "Psychedelic", 
-                "Electronic", 
-                "ChoralMusic", 
-                "Reggae", 
-                "Improvisation", 
-                "Blues", 
-                "Composers", 
-                "Lyrics", 
-                "WorldMusic", 
-                "NewAge", 
-                "Musicals", 
-                "Country", 
-                "Rock", 
-                "Folk", 
-                "Popular", 
-                "Rap", 
-                "Rhythm-n-Blues", 
-                "HumorAndComedy", 
-                "Jazz", 
-                "Hip-Hop", 
-                "PunkRock", 
-                "MusicalInstruments", 
-                "Classical", 
-                "Hymns"
-            ]
-        },
-        "StylesEnum": {
-            "type": "string",
-            "enum": [
-                "formal", 
-                "informal"
-            ]
-        },
-        "TraitsEnum": {
-            "type": "string",
-            "enum": [
-                "Perceiving", 
-                "Agreeable", 
-                "Controlled", 
-                "Judging", 
-                "Excessive", 
-                "Feeling", 
-                "Disagreeable", 
-                "Intelligent", 
-                "Pessimistic", 
-                "Extravert", 
-                "Neurotic", 
-                "Introvert", 
-                "Optimistic", 
-                "Resilient", 
-                "Indulgent", 
-                "Closeminded", 
-                "Thinking", 
-                "Tempered", 
-                "Sensing", 
-                "Openminded"
-            ]
-        },
-        "DegreeEnum": {
-            "type": "string",
-            "enum": [
-                "Bachelor's degree", 
-                "Certificate", 
-                "Master's degree", 
-                "High-school diploma", 
-                "Doctorate's degree"
-            ]
-        },
-        "RecreationEnum": {
-            "type": "string",
-            "enum": [
-                "Collecting", 
-                "Pets", 
-                "RailroadModels", 
-                "CardTricks", 
-                "Fireworks", 
-                "Hunting", 
-                "JigsawPuzzles", 
-                "Photography", 
-                "Museums", 
-                "Cycling", 
-                "ArtGalleries", 
-                "Circus", 
-                "Gardening", 
-                "Puppets", 
-                "Radio", 
-                "Festivals", 
-                "Aquariums", 
-                "Juggling", 
-                "Beaches", 
-                "Humor", 
-                "Books", 
-                "BirdWatching", 
-                "Camping", 
-                "Fairs", 
-                "Television", 
-                "Dance", 
-                "Kites", 
-                "Zoos", 
-                "Rafting", 
-                "Crafts", 
-                "Movies", 
-                "WordGames", 
-                "CrosswordPuzzles", 
-                "Toys", 
-                "Backpacking", 
-                "Fortune-telling", 
-                "Lotteries", 
-                "Hiking", 
-                "Gambling", 
-                "Fishing", 
-                "MagicTricks", 
-                "Games"
-            ]
-        },
-        "ScienceFieldEnum": {
-            "type": "string",
-            "enum": [
-                "Weather", 
-                "Inventions", 
-                "Plants", 
-                "Medicine", 
-                "NobelPrizes", 
-                "UserModeling", 
-                "Cloning", 
-                "UbiquitousComputing", 
-                "Taxonomy", 
-                "Genetics", 
-                "Mathematics", 
-                "Expeditions", 
-                "Archaeology", 
-                "Microorganisms", 
-                "Scientists", 
-                "Zoology", 
-                "Physics", 
-                "HumanGenome", 
-                "Technology", 
-                "NatureSounds", 
-                "Standardization", 
-                "Biology", 
-                "Animals", 
-                "Geography", 
-                "Botany", 
-                "Psychology", 
-                "NuclearEnergy", 
-                "Agriculture", 
-                "LifeSciences", 
-                "ComputerScience", 
-                "Molecules", 
-                "Ontologies", 
-                "SemanticWeb", 
-                "Geology", 
-                "PhysicalSciences", 
-                "Evolution", 
-                "Astronomy", 
-                "Environment", 
-                "Chemistry", 
-                "Anthropology"
-            ]
-        },
-        "ReligionEnum": {
-            "type": "string",
-            "enum": [
-                "Christianity", 
-                "Irreligion", 
-                "Islam", 
-                "Other", 
-                "Hinduism", 
-                "Folk Religion", 
-                "Buddhism"
-            ]
-        },
-        "SexualityEnum": {
-            "type": "string",
-            "enum": [
-                "Homosexual", 
-                "Heterosexual", 
-                "Pansexual", 
-                "Asexual", 
-                "Bisexual", 
-                "Other"
-            ]
-        },
-        "AspectsEnum": {
-            "type": "string",
-            "enum": [
-                "Sight", 
-                "Learning", 
-                "Mental Health", 
-                "Speech", 
-                "Cognitive", 
-                "Memory", 
-                "Hearing", 
-                "Social Relationships", 
-                "Mobility"
-            ]
-        },
-        "CharacteristicsEnum": {
-            "type": "string",
-            "enum": [
-                "Contended", 
-                "Anxious", 
-                "Assertive", 
-                "Imaginative", 
-                "Quiet", 
-                "Helpful", 
-                "Loyal", 
-                "Shy", 
-                "Efficient", 
-                "Worrying", 
-                "Dominant", 
-                "Organised", 
-                "Faultfinding", 
-                "Stable", 
-                "Moody", 
-                "Thorough", 
-                "Reserved", 
-                "Frivolous", 
-                "Talkative", 
-                "Calm", 
-                "Unfriendly", 
-                "Reliable", 
-                "Commonplace", 
-                "Careless", 
-                "Tense", 
-                "Sympathetic", 
-                "Cold", 
-                "Artistic", 
-                "Disorderly", 
-                "Inventive", 
-                "Kind", 
-                "Warm", 
-                "Cooperative", 
-                "Retiring"
-            ]
-        },
-        "GenderEnum": {
-            "type": "string",
-            "enum": [
-                "Female", 
-                "Other", 
-                "Male"
-            ]
-        },
-        "EnvironmentEnum": {
-            "type": "string",
-            "enum": [
-                "Windpower", 
-                "Weather", 
-                "Fire", 
-                "EndangeredSpecies", 
-                "HazardousWastes", 
-                "Protection", 
-                "Habitat", 
-                "RenewableEnergy", 
-                "NuclearEnergy", 
-                "DesertsAndDesertification", 
-                "EnvironmentalHealth", 
-                "SolarEnergy", 
-                "Recycling", 
-                "PestsAndDiseases", 
-                "BiologicalDiversity", 
-                "LightPollution", 
-                "Wetlands", 
-                "Disasters", 
-                "RadioactiveWaste", 
-                "Pesticides", 
-                "Littering", 
-                "ForestsAndDeforestation", 
-                "CoralReefs", 
-                "RuralDevelopment", 
-                "EnvironmentalEducation", 
-                "WildlifeConservation", 
-                "NaturalHistory", 
-                "Toxicology", 
-                "Water", 
-                "AirPollution", 
-                "PetroleumIndustry", 
-                "HazardousSubstances", 
-                "EnergyConservation", 
-                "FuelCells", 
-                "ClimaticChangesAndGlobalWarming", 
-                "GovernmentPolicy", 
-                "Ponds", 
-                "IndustrialSafety", 
-                "NoisePollution", 
-                "RainForests"
-            ]
-        },
-        "InputEnum": {
-            "type": "string",
-            "enum": [
-                "text", 
-                "voice", 
-                "video", 
-                "image", 
-                "click"
-            ]
-        },
-        "GameGenreEnum": {
-            "type": "string",
-            "enum": [
-                "Action", 
-                "Simulation", 
-                "Fighting", 
-                "Platform", 
-                "Strategy", 
-                "BoardGames", 
-                "Sports", 
-                "Arcade", 
-                "Shoot-Em-Up", 
-                "Adventure", 
-                "Racing", 
-                "Children", 
-                "Puzzle"
-            ]
-        },
-        "FilmGenreEnum": {
-            "type": "string",
-            "enum": [
-                "Drama", 
-                "Adventure", 
-                "ChildrenAndFamily", 
-                "Westerns", 
-                "Comedy", 
-                "Musicals", 
-                "Documentary", 
-                "Television", 
-                "Soaps", 
-                "Animation", 
-                "War", 
-                "ScienceFiction", 
-                "Classics", 
-                "Horror", 
-                "SportsAndExercise", 
-                "Independent", 
-                "Thriller", 
-                "Romance", 
-                "Crime", 
-                "MusicAndConcert", 
-                "MartialArts", 
-                "Action", 
-                "Fantasy", 
-                "Other", 
-                "Mystery"
-            ]
-        },
-        "PoliticalEnum": {
-            "type": "string",
-            "enum": [
-                "Sligthly Liberal", 
-                "Conservative", 
-                "Extremely Liberal", 
-                "Sligthly Conservative", 
-                "Liberal", 
-                "Extremely Conservative", 
-                "Neutral"
-            ]
-        },
-        "SportEnum": {
-            "type": "string",
-            "enum": [
-                "AutomobileRacing", 
-                "Olympics", 
-                "WinterSports", 
-                "Climbing", 
-                "Skateboarding", 
-                "Softball", 
-                "Karting", 
-                "Triathlon", 
-                "Luge", 
-                "Soccer", 
-                "Wrestling", 
-                "FieldHockey", 
-                "Motorcycles", 
-                "Boomerangs", 
-                "FlyingDiscs", 
-                "Fencing", 
-                "Football", 
-                "Swimming", 
-                "Boating", 
-                "Surfing", 
-                "Cycling", 
-                "Tennis", 
-                "Running", 
-                "HorseRacing", 
-                "Baseball", 
-                "TableTennis", 
-                "Chess", 
-                "Rodeos", 
-                "Gymnastics", 
-                "Basketball", 
-                "Skating", 
-                "Boxing", 
-                "Cricket", 
-                "Hockey", 
-                "Sailing", 
-                "ScubaDiving", 
-                "Skiing", 
-                "Golf", 
-                "Athletics", 
-                "Badminton", 
-                "Volleyball", 
-                "Bowling", 
-                "IceHockey", 
-                "IceSkating", 
-                "Skydiving", 
-                "Windsurfing"
-            ]
-        },
-        "ColorBlindnessEnum": {
-            "type": "string",
-            "enum": [
-                "Achromatopsia", 
-                "Deuteranopia", 
-                "Protanopia", 
-                "Rod Monochromacy", 
-                "Deuteranomaly", 
-                "Tritanomaly", 
-                "Tritanopia", 
-                "Protanomaly"
-            ]
-        },
-        "OutputEnum": {
-            "type": "string",
-            "enum": [
-                "audio", 
-                "video", 
-                "text", 
-                "image"
-            ]
-        },
-        "Cognitive": {
-            "allOf": [{
-                "type": "object",
-                "properties": {
-                    "languageProduction": {
-                        "type": "integer"
-                    },
-                    "physiologicalArousal": {
-                        "type": "integer"
-                    },
-                    "ICTLiteracy": {
-                        "type": "integer"
-                    },
-                    "valence": {
-                        "type": "integer"
-                    },
-                    "ProcessingSpeed": {
-                        "type": "integer"
-                    },
-                    "languageReception": {
-                        "type": "integer"
-                    },
-                    "understandingAbstractSigns": {
-                        "type": "integer"
-                    },
-                    "visuospatialAbilities": {
-                        "type": "integer"
-                    },
-                    "ICTAnxiousness": {
-                        "type": "integer"
-                    },
-                    "trailMakingTest": {
-                        "type": "integer"
-                    },
-                    "neuroCognitivePerformanceTest": {
-                        "type": "string"
-                    },
-                    "emotionalIntelligence": {
-                        "type": "integer"
-                    }
-                   
-                },
-                "required": [
-                ]
-            }
-        ]},
         "forearm": {
             "allOf": [{
                 "type": "object",
@@ -2297,10 +2269,10 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "pronation": {
+                    "supination": {
                         "type": "integer"
                     },
-                    "supination": {
+                    "pronation": {
                         "type": "integer"
                     },
                     "finger_end": {
@@ -2333,17 +2305,20 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "blindSpotCount": {
-                        "type": "integer"
-                    },
-                    "distorsion": {
+                    "spectralSensitivity": {
                         "type": "number"
                     },
                     "visualAcuity": {
                         "type": "number"
                     },
-                    "nearVisualAcuity": {
+                    "blindSpotSize": {
                         "type": "number"
+                    },
+                    "distorsion": {
+                        "type": "number"
+                    },
+                    "blindSpotCount": {
+                        "type": "integer"
                     },
                     "blindSpotArea": {
                         "type": "number"
@@ -2351,19 +2326,16 @@
                     "colorBlindness": {
                         "$ref": "#/definitions/ColorBlindnessEnum"
                     },
-                    "contrastSensitivity": {
+                    "nearVisualAcuity": {
                         "type": "number"
                     },
-                    "glareSensitivity": {
+                    "contrastSensitivity": {
                         "type": "number"
                     },
                     "blindSpotOpacity": {
                         "type": "integer"
                     },
-                    "spectralSensitivity": {
-                        "type": "number"
-                    },
-                    "blindSpotSize": {
+                    "glareSensitivity": {
                         "type": "number"
                     }
                 },
@@ -2375,17 +2347,17 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "extensionForce": {
-                        "type": "integer"
-                    },
                     "flexionForce": {
                         "type": "integer"
                     },
-                    "flexion_end": {
-                        "$ref": "#/definitions/flexion"
+                    "extensionForce": {
+                        "type": "integer"
                     },
                     "hyperExtension_end": {
                         "$ref": "#/definitions/hyperExtension"
+                    },
+                    "flexion_end": {
+                        "$ref": "#/definitions/flexion"
                     }
                 },
                 "required": [
@@ -2396,13 +2368,13 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "bicepsCircumferenceRelaxedInMeters": {
+                    "shoulderElbowLengthInMeters": {
                         "type": "number"
                     },
                     "bicepsCircumferenceFlexedInMeters": {
                         "type": "number"
                     },
-                    "shoulderElbowLengthInMeters": {
+                    "bicepsCircumferenceRelaxedInMeters": {
                         "type": "number"
                     },
                     "forarmLengthInMeters": {
@@ -2417,6 +2389,9 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "hearingAt500Hz": {
+                        "type": "integer"
+                    },
                     "hearingAt4kHz": {
                         "type": "integer"
                     },
@@ -2430,9 +2405,6 @@
                         "type": "integer"
                     },
                     "hearingAt250Hz": {
-                        "type": "integer"
-                    },
-                    "hearingAt500Hz": {
                         "type": "integer"
                     }
                 },
@@ -2459,14 +2431,14 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "name": {
+                        "type": "string"
+                    },
                     "description": {
                         "type": "string"
                     },
                     "affects": {
                         "$ref": "#/definitions/AspectsEnum"
-                    },
-                    "name": {
-                        "type": "string"
                     }
                 },
                 "required": [
@@ -2543,31 +2515,31 @@
                     "extensionB": {
                         "type": "integer"
                     },
+                    "adductionA": {
+                        "type": "integer"
+                    },
                     "hyperExtensionB": {
-                        "type": "integer"
-                    },
-                    "abductionB": {
-                        "type": "integer"
-                    },
-                    "adductionB": {
-                        "type": "integer"
-                    },
-                    "hyperExtensionC": {
-                        "type": "integer"
-                    },
-                    "extensionA": {
-                        "type": "integer"
-                    },
-                    "hyperExtensionA": {
-                        "type": "integer"
-                    },
-                    "flexionC": {
                         "type": "integer"
                     },
                     "flexionA": {
                         "type": "integer"
                     },
-                    "adductionA": {
+                    "flexionC": {
+                        "type": "integer"
+                    },
+                    "adductionB": {
+                        "type": "integer"
+                    },
+                    "hyperExtensionA": {
+                        "type": "integer"
+                    },
+                    "extensionA": {
+                        "type": "integer"
+                    },
+                    "abductionB": {
+                        "type": "integer"
+                    },
+                    "hyperExtensionC": {
                         "type": "integer"
                     },
                     "flexionB": {
@@ -2591,11 +2563,11 @@
                     "internalRotation": {
                         "type": "integer"
                     },
-                    "flexion_end": {
-                        "$ref": "#/definitions/flexion"
-                    },
                     "extension_end": {
                         "$ref": "#/definitions/extension"
+                    },
+                    "flexion_end": {
+                        "$ref": "#/definitions/flexion"
                     }
                 },
                 "required": [
@@ -2621,25 +2593,25 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "sittingHeightInMeters": {
+                        "type": "number"
+                    },
                     "headLengthInMeters": {
-                        "type": "number"
-                    },
-                    "bideltoidBreadthInMeters": {
-                        "type": "number"
-                    },
-                    "waistCircumferenceInMeters": {
                         "type": "number"
                     },
                     "weightInKg": {
                         "type": "number"
                     },
-                    "statureInMeters": {
+                    "waistCircumferenceInMeters": {
+                        "type": "number"
+                    },
+                    "bideltoidBreadthInMeters": {
                         "type": "number"
                     },
                     "headBreadthInMeters": {
                         "type": "number"
                     },
-                    "sittingHeightInMeters": {
+                    "statureInMeters": {
                         "type": "number"
                     },
                     "lowerLimbAnthropometric_end": {
@@ -2699,13 +2671,10 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "fatigue": {
-                        "type": "integer"
+                    "temperature": {
+                        "type": "number"
                     },
-                    "nourishment": {
-                        "type": "integer"
-                    },
-                    "injury": {
+                    "arousal": {
                         "type": "boolean"
                     },
                     "bloodPressure": {
@@ -2714,19 +2683,22 @@
                     "perspiration": {
                         "type": "integer"
                     },
+                    "nourishment": {
+                        "type": "integer"
+                    },
+                    "fatigue": {
+                        "type": "integer"
+                    },
+                    "heartbeat": {
+                        "type": "integer"
+                    },
+                    "injury": {
+                        "type": "boolean"
+                    },
                     "pupilsDilation": {
                         "type": "integer"
                     },
                     "respiration": {
-                        "type": "integer"
-                    },
-                    "temperature": {
-                        "type": "number"
-                    },
-                    "arousal": {
-                        "type": "boolean"
-                    },
-                    "heartbeat": {
                         "type": "integer"
                     }
                 },
@@ -2738,28 +2710,28 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "hipBreadthInMeters": {
+                    "ankleHeightInMeters": {
                         "type": "number"
                     },
                     "kneeHeightInMeters": {
                         "type": "number"
                     },
-                    "calfCirumferenceInMeters": {
+                    "footBreadthInMeters": {
                         "type": "number"
                     },
                     "buttockKneeInMeters": {
                         "type": "number"
                     },
+                    "hipBreadthInMeters": {
+                        "type": "number"
+                    },
                     "footLengthInMeters": {
                         "type": "number"
                     },
-                    "ankleHeightInMeters": {
+                    "calfCirumferenceInMeters": {
                         "type": "number"
                     },
                     "tighCircumferenceInMeters": {
-                        "type": "number"
-                    },
-                    "footBreadthInMeters": {
                         "type": "number"
                     }
                 },
@@ -2771,22 +2743,22 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "handEyeCoordination": {
+                        "type": "integer"
+                    },
                     "fingerPrecision": {
                         "type": "integer"
                     },
                     "pinchGrip": {
                         "type": "number"
                     },
+                    "clenchGrip": {
+                        "type": "number"
+                    },
                     "armPrecision": {
                         "type": "integer"
                     },
                     "handPrecision": {
-                        "type": "integer"
-                    },
-                    "clenchGrip": {
-                        "type": "number"
-                    },
-                    "handEyeCoordination": {
                         "type": "integer"
                     },
                     "contactGrip": {
@@ -2819,11 +2791,11 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "Phonation_end": {
-                        "$ref": "#/definitions/Phonation"
-                    },
                     "Prosody_end": {
                         "$ref": "#/definitions/Prosody"
+                    },
+                    "Phonation_end": {
+                        "$ref": "#/definitions/Phonation"
                     }
                 },
                 "required": [
@@ -2878,60 +2850,60 @@
                 ]
             }
         ]},
-        "Accessibility": {
+        "Memory": {
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "Disability_end": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/definitions/Disability"
-                        }
+                    "sensoryMemory": {
+                        "type": "integer"
                     },
-                    "Physiological State_end": {
-                        "$ref": "#/definitions/Physiological State"
+                    "workingMemory": {
+                        "type": "integer"
                     },
-                    "Memory_end": {
-                        "$ref": "#/definitions/Memory"
-                    },
-                    "Mobility_end": {
-                        "$ref": "#/definitions/Mobility"
-                    },
-                    "Hearing_end": {
-                        "$ref": "#/definitions/Hearing"
-                    },
-                    "Sight_end": {
-                        "$ref": "#/definitions/Sight"
-                    },
-                    "Cognitive_end": {
-                        "$ref": "#/definitions/Cognitive"
-                    },
-                    "0..1": {
-                        "$ref": "#/definitions/Anthropometric"
-                    },
-                    "Speech_end": {
-                        "$ref": "#/definitions/Speech"
-                    },
-                    "Motoric_end": {
-                        "$ref": "#/definitions/Motoric"
+                    "longTermMemory": {
+                        "type": "integer"
                     }
                 },
                 "required": [
                 ]
             }
         ]},
-        "Memory": {
+        "Accessibility": {
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "longTermMemory": {
-                        "type": "integer"
+                    "Motoric_end": {
+                        "$ref": "#/definitions/Motoric"
                     },
-                    "sensoryMemory": {
-                        "type": "integer"
+                    "Sight_end": {
+                        "$ref": "#/definitions/Sight"
                     },
-                    "workingMemory": {
-                        "type": "integer"
+                    "Physiological State_end": {
+                        "$ref": "#/definitions/Physiological State"
+                    },
+                    "Disability_end": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/Disability"
+                        }
+                    },
+                    "Mobility_end": {
+                        "$ref": "#/definitions/Mobility"
+                    },
+                    "Memory_end": {
+                        "$ref": "#/definitions/Memory"
+                    },
+                    "Hearing_end": {
+                        "$ref": "#/definitions/Hearing"
+                    },
+                    "Cognitive_end": {
+                        "$ref": "#/definitions/Cognitive"
+                    },
+                    "Speech_end": {
+                        "$ref": "#/definitions/Speech"
+                    },
+                    "Anthropometric_end": {
+                        "$ref": "#/definitions/Anthropometric"
                     }
                 },
                 "required": [
@@ -2963,11 +2935,11 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "level": {
-                        "$ref": "#/definitions/CEFR"
-                    },
                     "iso693_3": {
                         "type": "string"
+                    },
+                    "level": {
+                        "$ref": "#/definitions/CEFR"
                     }
                 },
                 "required": [
@@ -3008,14 +2980,14 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "degreeName": {
-                        "type": "string"
-                    },
                     "providedBy": {
                         "type": "string"
                     },
                     "degreeType": {
                         "$ref": "#/definitions/DegreeEnum"
+                    },
+                    "degreeName": {
+                        "type": "string"
                     },
                     "fieldOfDegree": {
                         "type": "string"
@@ -3068,13 +3040,19 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "restrain_to_indulgence": {
+                        "type": "integer"
+                    },
+                    "collectivism_to_individualism": {
+                        "type": "integer"
+                    },
+                    "uncertaintyAvoidance": {
+                        "type": "integer"
+                    },
                     "powerDistance": {
                         "type": "integer"
                     },
                     "feminity_to_masculinity": {
-                        "type": "integer"
-                    },
-                    "uncertaintyAvoidance": {
                         "type": "integer"
                     },
                     "religion": {
@@ -3082,29 +3060,6 @@
                     },
                     "temporalOrientation": {
                         "type": "integer"
-                    },
-                    "collectivism_to_individualism": {
-                        "type": "integer"
-                    },
-                    "restrain_to_indulgence": {
-                        "type": "integer"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "VideoGames": {
-            "allOf": [
-            { "$ref": "#/definitions/Topic" },
-            {
-                "type": "object",
-                "properties": {
-                    "genres": {
-                        "type": "array",
-                        "items": {
-                        "$ref": "#/definitions/GameGenreEnum"
-                        }
                     }
                 },
                 "required": [
@@ -3115,6 +3070,9 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "anger": {
+                        "type": "integer"
+                    },
                     "dread": {
                         "type": "integer"
                     },
@@ -3168,9 +3126,44 @@
                     },
                     "anxiety": {
                         "type": "integer"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Preference": {
+            "allOf": [{
+                "type": "object",
+                "properties": {
+                    "Design_end": {
+                        "$ref": "#/definitions/Design"
                     },
-                    "anger": {
-                        "type": "integer"
+                    "Interaction_Modality_end": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/Interaction_Modality"
+                        }
+                    },
+                    "Content_end": {
+                        "$ref": "#/definitions/Content"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "VideoGames": {
+            "allOf": [
+            { "$ref": "#/definitions/Topic" },
+            {
+                "type": "object",
+                "properties": {
+                    "genres": {
+                        "type": "array",
+                        "items": {
+                        "$ref": "#/definitions/GameGenreEnum"
+                        }
                     }
                 },
                 "required": [
@@ -3183,44 +3176,6 @@
                 "properties": {
                     "Topic_end": {
                         "$ref": "#/definitions/Topic"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Environment": {
-            "allOf": [
-            { "$ref": "#/definitions/Topic" },
-            {
-                "type": "object",
-                "properties": {
-                    "topics": {
-                        "type": "array",
-                        "items": {
-                        "$ref": "#/definitions/EnvironmentEnum"
-                        }
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Preference": {
-            "allOf": [{
-                "type": "object",
-                "properties": {
-                    "Content_end": {
-                        "$ref": "#/definitions/Content"
-                    },
-                    "Interaction_Modality_end": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/definitions/Interaction_Modality"
-                        }
-                    },
-                    "Design_end": {
-                        "$ref": "#/definitions/Design"
                     }
                 },
                 "required": [
@@ -3251,16 +3206,16 @@
                 ]
             }
         ]},
-        "Recreation": {
+        "Environment": {
             "allOf": [
             { "$ref": "#/definitions/Topic" },
             {
                 "type": "object",
                 "properties": {
-                    "types": {
+                    "topics": {
                         "type": "array",
                         "items": {
-                        "$ref": "#/definitions/RecreationEnum"
+                        "$ref": "#/definitions/EnvironmentEnum"
                         }
                     }
                 },
@@ -3275,6 +3230,9 @@
                     "politicalBelief": {
                         "$ref": "#/definitions/PoliticalEnum"
                     },
+                    "gender": {
+                        "$ref": "#/definitions/GenderEnum"
+                    },
                     "nationality_iso3166": {
                         "type": "array",
                         "items": {
@@ -3284,6 +3242,9 @@
                     "age": {
                         "type": "integer"
                     },
+                    "address": {
+                        "type": "string"
+                    },
                     "lastName": {
                         "type": "string"
                     },
@@ -3292,12 +3253,6 @@
                     },
                     "firstName": {
                         "type": "string"
-                    },
-                    "address": {
-                        "type": "string"
-                    },
-                    "gender": {
-                        "$ref": "#/definitions/GenderEnum"
                     },
                     "Interest_end": {
                         "type": "array",
@@ -3326,10 +3281,10 @@
                             "$ref": "#/definitions/Language"
                         }
                     },
-                    "Skill_end": {
+                    "Knowledge_end": {
                         "type": "array",
                         "items": {
-                            "$ref": "#/definitions/Skill"
+                            "$ref": "#/definitions/Knowledge"
                         }
                     },
                     "Experience_end": {
@@ -3338,11 +3293,45 @@
                             "$ref": "#/definitions/Experience"
                         }
                     },
-                    "Knowledge_end": {
+                    "Skill_end": {
                         "type": "array",
                         "items": {
-                            "$ref": "#/definitions/Knowledge"
+                            "$ref": "#/definitions/Skill"
                         }
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Recreation": {
+            "allOf": [
+            { "$ref": "#/definitions/Topic" },
+            {
+                "type": "object",
+                "properties": {
+                    "types": {
+                        "type": "array",
+                        "items": {
+                        "$ref": "#/definitions/RecreationEnum"
+                        }
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Other": {
+            "allOf": [
+            { "$ref": "#/definitions/Topic" },
+            {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
                     }
                 },
                 "required": [
@@ -3385,11 +3374,11 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "Output_Modality_end": {
-                        "$ref": "#/definitions/Output_Modality"
-                    },
                     "Input_Modality_end": {
                         "$ref": "#/definitions/Input_Modality"
+                    },
+                    "Output_Modality_end": {
+                        "$ref": "#/definitions/Output_Modality"
                     }
                 },
                 "required": [
@@ -3414,6 +3403,9 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "colorScheme": {
+                        "type": "string"
+                    },
                     "contentContrast": {
                         "type": "integer"
                     },
@@ -3425,9 +3417,6 @@
                     },
                     "textSize": {
                         "type": "integer"
-                    },
-                    "colorScheme": {
-                        "type": "string"
                     }
                 },
                 "required": [
@@ -3455,28 +3444,11 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "PreferredLanguage_end": {
-                        "$ref": "#/definitions/PreferredLanguage"
-                    },
                     "*": {
                         "$ref": "#/definitions/Item"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Science": {
-            "allOf": [
-            { "$ref": "#/definitions/Topic" },
-            {
-                "type": "object",
-                "properties": {
-                    "fields": {
-                        "type": "array",
-                        "items": {
-                        "$ref": "#/definitions/ScienceFieldEnum"
-                        }
+                    },
+                    "PreferredLanguage_end": {
+                        "$ref": "#/definitions/PreferredLanguage"
                     }
                 },
                 "required": [
@@ -3489,6 +3461,24 @@
                 "properties": {
                     "value": {
                         "$ref": "#/definitions/InputEnum"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Intraphysic_Self": {
+            "allOf": [{
+                "type": "object",
+                "properties": {
+                    "identityImportance": {
+                        "type": "string"
+                    },
+                    "masteryImportance": {
+                        "type": "string"
+                    },
+                    "securityImportance": {
+                        "type": "string"
                     }
                 },
                 "required": [
@@ -3510,18 +3500,17 @@
                 ]
             }
         ]},
-        "Intraphysic_Self": {
-            "allOf": [{
+        "Science": {
+            "allOf": [
+            { "$ref": "#/definitions/Topic" },
+            {
                 "type": "object",
                 "properties": {
-                    "securityImportance": {
-                        "type": "string"
-                    },
-                    "identityImportance": {
-                        "type": "string"
-                    },
-                    "masteryImportance": {
-                        "type": "string"
+                    "fields": {
+                        "type": "array",
+                        "items": {
+                        "$ref": "#/definitions/ScienceFieldEnum"
+                        }
                     }
                 },
                 "required": [
@@ -3561,38 +3550,14 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "negative_to_positive": {
-                        "type": "integer"
-                    },
                     "description": {
                         "type": "string"
                     },
+                    "negative_to_positive": {
+                        "type": "integer"
+                    },
                     "Topic_end": {
                         "$ref": "#/definitions/Topic"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Mobility": {
-            "allOf": [{
-                "type": "object",
-                "properties": {
-                    "Neck_end": {
-                        "$ref": "#/definitions/Neck"
-                    },
-                    "Gait_end": {
-                        "$ref": "#/definitions/Gait"
-                    },
-                    "right": {
-                        "$ref": "#/definitions/lowerLimb"
-                    },
-                    "left": {
-                        "$ref": "#/definitions/UpperLimp"
-                    },
-                    "spinalColumn_end": {
-                        "$ref": "#/definitions/spinalColumn"
                     }
                 },
                 "required": [
@@ -3603,50 +3568,11 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "score": {
-                        "type": "integer"
-                    },
                     "name": {
                         "$ref": "#/definitions/CharacteristicsEnum"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "UpperLimp": {
-            "allOf": [{
-                "type": "object",
-                "properties": {
-                    "pushForce": {
+                    },
+                    "score": {
                         "type": "integer"
-                    },
-                    "inForce": {
-                        "type": "integer"
-                    },
-                    "elbowTorque": {
-                        "type": "integer"
-                    },
-                    "pullForce": {
-                        "type": "integer"
-                    },
-                    "outForce": {
-                        "type": "integer"
-                    },
-                    "shoulder_end": {
-                        "$ref": "#/definitions/shoulder"
-                    },
-                    "wrist_end": {
-                        "$ref": "#/definitions/wrist"
-                    },
-                    "elbow_end": {
-                        "$ref": "#/definitions/elbow"
-                    },
-                    "forearm_end": {
-                        "$ref": "#/definitions/forearm"
-                    },
-                    "hand_end": {
-                        "$ref": "#/definitions/hand"
                     }
                 },
                 "required": [
@@ -3671,25 +3597,6 @@
                 ]
             }
         ]},
-        "Other": {
-            "allOf": [
-            { "$ref": "#/definitions/Topic" },
-            
-            { "$ref": "#/definitions/Trait" },
-            {
-                "type": "object",
-                "properties": {
-                    "description": {
-                        "type": "string"
-                    },
-                    "name": {
-                        "type": "string"
-                    }
-                },
-                "required": [
-                ]
-            }
-        ]},
         "Big_Five_Traits": {
             "allOf": [
             { "$ref": "#/definitions/Trait" },
@@ -3701,40 +3608,7 @@
                 ]
             }
         ]},
-        "Openness": {
-            "allOf": [
-            { "$ref": "#/definitions/Big_Five_Traits" },
-            {
-                "type": "object",
-                "properties": {
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Extraversion": {
-            "allOf": [
-            { "$ref": "#/definitions/Big_Five_Traits" },
-            {
-                "type": "object",
-                "properties": {
-                },
-                "required": [
-                ]
-            }
-        ]},
         "Agreeableness": {
-            "allOf": [
-            { "$ref": "#/definitions/Big_Five_Traits" },
-            {
-                "type": "object",
-                "properties": {
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Neuroticism": {
             "allOf": [
             { "$ref": "#/definitions/Big_Five_Traits" },
             {
@@ -3756,9 +3630,9 @@
                 ]
             }
         ]},
-        "MyersBriggsTypeInventory": {
+        "Openness": {
             "allOf": [
-            { "$ref": "#/definitions/Trait" },
+            { "$ref": "#/definitions/Big_Five_Traits" },
             {
                 "type": "object",
                 "properties": {
@@ -3767,9 +3641,31 @@
                 ]
             }
         ]},
-        "JudgingToPerceiving": {
+        "Neuroticism": {
             "allOf": [
-            { "$ref": "#/definitions/MyersBriggsTypeInventory" },
+            { "$ref": "#/definitions/Big_Five_Traits" },
+            {
+                "type": "object",
+                "properties": {
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Extraversion": {
+            "allOf": [
+            { "$ref": "#/definitions/Big_Five_Traits" },
+            {
+                "type": "object",
+                "properties": {
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "MyersBriggsTypeInventory": {
+            "allOf": [
+            { "$ref": "#/definitions/Trait" },
             {
                 "type": "object",
                 "properties": {
@@ -3800,12 +3696,37 @@
                 ]
             }
         ]},
+        "JudgingToPerceiving": {
+            "allOf": [
+            { "$ref": "#/definitions/MyersBriggsTypeInventory" },
+            {
+                "type": "object",
+                "properties": {
+                },
+                "required": [
+                ]
+            }
+        ]},
         "ExtraversionToIntroversion": {
             "allOf": [
             { "$ref": "#/definitions/MyersBriggsTypeInventory" },
             {
                 "type": "object",
                 "properties": {
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "OtherTrait": {
+            "allOf": [
+            { "$ref": "#/definitions/Trait" },
+            {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    }
                 },
                 "required": [
                 ]
@@ -3818,11 +3739,35 @@
                     "Instrumental_end": {
                         "$ref": "#/definitions/Instrumental_Material_World"
                     },
-                    "Interpersonal_end": {
-                        "$ref": "#/definitions/Interpersonal_Social_World"
-                    },
                     "Intraphysic_end": {
                         "$ref": "#/definitions/Intraphysic_Self"
+                    },
+                    "Interpersonal_end": {
+                        "$ref": "#/definitions/Interpersonal_Social_World"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Mobility": {
+            "allOf": [{
+                "type": "object",
+                "properties": {
+                    "left": {
+                        "$ref": "#/definitions/UpperLimp"
+                    },
+                    "spinalColumn_end": {
+                        "$ref": "#/definitions/spinalColumn"
+                    },
+                    "right": {
+                        "$ref": "#/definitions/lowerLimb"
+                    },
+                    "Neck_end": {
+                        "$ref": "#/definitions/Neck"
+                    },
+                    "Gait_end": {
+                        "$ref": "#/definitions/Gait"
                     }
                 },
                 "required": [
@@ -3835,45 +3780,6 @@
             {
                 "type": "object",
                 "properties": {
-                },
-                "required": [
-                ]
-            }
-        ]},
-        "Gait": {
-            "allOf": [{
-                "type": "object",
-                "properties": {
-                    "stepAssymetry": {
-                        "type": "integer"
-                    },
-                    "stepWidthInMeters": {
-                        "type": "number"
-                    },
-                    "cadence": {
-                        "type": "integer"
-                    },
-                    "doubleSupport": {
-                        "type": "integer"
-                    },
-                    "weightShift": {
-                        "type": "integer"
-                    },
-                    "velocity": {
-                        "type": "integer"
-                    },
-                    "strideLengthInMeters": {
-                        "type": "number"
-                    },
-                    "footContact": {
-                        "type": "integer"
-                    },
-                    "gaitCycle": {
-                        "type": "integer"
-                    },
-                    "stepLengthInMeters": {
-                        "type": "number"
-                    }
                 },
                 "required": [
                 ]
@@ -3897,18 +3803,39 @@
                 ]
             }
         ]},
-        "Phonation": {
+        "UpperLimp": {
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "syllableDuration": {
-                        "type": "number"
+                    "outForce": {
+                        "type": "integer"
                     },
-                    "voicePitch": {
-                        "type": "number"
+                    "pushForce": {
+                        "type": "integer"
                     },
-                    "fundamentalFrequency": {
-                        "type": "number"
+                    "inForce": {
+                        "type": "integer"
+                    },
+                    "pullForce": {
+                        "type": "integer"
+                    },
+                    "elbowTorque": {
+                        "type": "integer"
+                    },
+                    "forearm_end": {
+                        "$ref": "#/definitions/forearm"
+                    },
+                    "hand_end": {
+                        "$ref": "#/definitions/hand"
+                    },
+                    "shoulder_end": {
+                        "$ref": "#/definitions/shoulder"
+                    },
+                    "wrist_end": {
+                        "$ref": "#/definitions/wrist"
+                    },
+                    "elbow_end": {
+                        "$ref": "#/definitions/elbow"
                     }
                 },
                 "required": [
@@ -3919,10 +3846,10 @@
             "allOf": [{
                 "type": "object",
                 "properties": {
-                    "belongingImportance": {
+                    "esteemImportance": {
                         "type": "integer"
                     },
-                    "esteemImportance": {
+                    "belongingImportance": {
                         "type": "integer"
                     },
                     "nurturanceImportance": {
@@ -3933,26 +3860,83 @@
                 ]
             }
         ]},
+        "Gait": {
+            "allOf": [{
+                "type": "object",
+                "properties": {
+                    "doubleSupport": {
+                        "type": "integer"
+                    },
+                    "gaitCycle": {
+                        "type": "integer"
+                    },
+                    "stepLengthInMeters": {
+                        "type": "number"
+                    },
+                    "velocity": {
+                        "type": "integer"
+                    },
+                    "strideLengthInMeters": {
+                        "type": "number"
+                    },
+                    "stepWidthInMeters": {
+                        "type": "number"
+                    },
+                    "cadence": {
+                        "type": "integer"
+                    },
+                    "stepAssymetry": {
+                        "type": "integer"
+                    },
+                    "weightShift": {
+                        "type": "integer"
+                    },
+                    "footContact": {
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Phonation": {
+            "allOf": [{
+                "type": "object",
+                "properties": {
+                    "voicePitch": {
+                        "type": "number"
+                    },
+                    "fundamentalFrequency": {
+                        "type": "number"
+                    },
+                    "syllableDuration": {
+                        "type": "number"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
         "hip": {
             "allOf": [{
                 "type": "object",
                 "properties": {
+                    "internalRotation": {
+                        "type": "integer"
+                    },
                     "extensionTorque": {
-                        "type": "integer"
-                    },
-                    "adduction": {
-                        "type": "integer"
-                    },
-                    "flexionTorque": {
-                        "type": "integer"
-                    },
-                    "abduction": {
                         "type": "integer"
                     },
                     "externalRotation": {
                         "type": "integer"
                     },
-                    "internalRotation": {
+                    "abduction": {
+                        "type": "integer"
+                    },
+                    "flexionTorque": {
+                        "type": "integer"
+                    },
+                    "adduction": {
                         "type": "integer"
                     },
                     "flexion_end": {
@@ -3979,20 +3963,71 @@
                     "ankleDorsiFlexion": {
                         "type": "integer"
                     },
-                    "thigh_end": {
-                        "$ref": "#/definitions/thigh"
-                    },
-                    "wrist_end": {
-                        "$ref": "#/definitions/wrist"
-                    },
                     "toe_end": {
                         "type": "array",
                         "items": {
                             "$ref": "#/definitions/toe"
                         }
                     },
+                    "wrist_end": {
+                        "$ref": "#/definitions/wrist"
+                    },
                     "hip_end": {
                         "$ref": "#/definitions/hip"
+                    },
+                    "thigh_end": {
+                        "$ref": "#/definitions/thigh"
+                    }
+                },
+                "required": [
+                ]
+            }
+        ]},
+        "Cognitive": {
+            "allOf": [{
+                "type": "object",
+                "properties": {
+                    "ICTAnxiousness": {
+                        "type": "integer"
+                    },
+                    "neuroCognitivePerformanceTest": {
+                        "type": "string"
+                    },
+                    "ICTLiteracy": {
+                        "type": "integer"
+                    },
+                    "emotionalIntelligence": {
+                        "type": "integer"
+                    },
+                    "physiologicalArousal": {
+                        "type": "integer"
+                    },
+                    "visuospatialAbilities": {
+                        "type": "integer"
+                    },
+                    "languageProduction": {
+                        "type": "integer"
+                    },
+                    "languageReception": {
+                        "type": "integer"
+                    },
+                    "ProcessingSpeed": {
+                        "type": "integer"
+                    },
+                    "valence": {
+                        "type": "integer"
+                    },
+                    "understandingAbstractSigns": {
+                        "type": "integer"
+                    },
+                    "trailMakingTest": {
+                        "type": "integer"
+                    },
+                    "EmotionalIntelligence_end": {
+                        "$ref": "#/definitions/EmotionalIntelligence"
+                    },
+                    "Attention_end": {
+                        "$ref": "#/definitions/Attention"
                     }
                 },
                 "required": [
