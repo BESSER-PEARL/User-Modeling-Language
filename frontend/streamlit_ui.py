@@ -14,6 +14,7 @@ from besser.bot.platforms.websocket.streamlit_ui.sidebar import sidebar
 
 from besser.bot.platforms.websocket.streamlit_ui.user_model_streamlit import user_model_forms
 
+
 def main():
     try:
         # We get the websocket host and port from the script arguments
@@ -21,11 +22,11 @@ def main():
     except Exception as e:
         # If they are not provided, we use default values
         bot_name = 'Chatbot Demo'
-    if 'user_model_saved' not in st.session_state:
-        st.session_state['user_model_saved'] = False  # Initialize the state
+    if 'user_model_editor' not in st.session_state:
+        st.session_state['user_model_editor'] = False  # Initialize the state
 
     # Switch between the user model page and chatbot app
-    if not st.session_state['user_model_saved']:
+    if st.session_state['user_model_editor']:
         user_model_forms()
     else:
         st.header(bot_name + " Chatbot")

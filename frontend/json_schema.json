@@ -1,0 +1,4482 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Generated JSON Schema",
+    "type": "object",
+    "properties": {
+        "forearm": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "pronation": {
+                            "type": "integer"
+                        },
+                        "supination": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "hand": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "supination": {
+                            "type": "integer"
+                        },
+                        "pronation": {
+                            "type": "integer"
+                        },
+                        "finger": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/finger"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "elbow": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "hyperExtension": {
+                            "$ref": "#/definitions/hyperExtension"
+                        },
+                        "flexion": {
+                            "$ref": "#/definitions/flexion"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Sight": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "spectralSensitivity": {
+                            "type": "number"
+                        },
+                        "visualAcuity": {
+                            "type": "number"
+                        },
+                        "blindSpotSize": {
+                            "type": "number"
+                        },
+                        "distorsion": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "blindSpotCount": {
+                            "type": "integer"
+                        },
+                        "blindSpotArea": {
+                            "type": "number"
+                        },
+                        "colorBlindness": {
+                            "$ref": "#/definitions/ColorBlindnessEnum"
+                        },
+                        "nearVisualAcuity": {
+                            "type": "number"
+                        },
+                        "contrastSensitivity": {
+                            "type": "number"
+                        },
+                        "blindSpotOpacity": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "glareSensitivity": {
+                            "type": "number"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "knee": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "flexionForce": {
+                            "type": "integer"
+                        },
+                        "extensionForce": {
+                            "type": "integer"
+                        },
+                        "hyperExtension": {
+                            "$ref": "#/definitions/hyperExtension"
+                        },
+                        "flexion": {
+                            "$ref": "#/definitions/flexion"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "upperLimbAnthropometric": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "bicepsCircumferenceFlexedInMeters": {
+                            "type": "number"
+                        },
+                        "shoulderElbowLengthInMeters": {
+                            "type": "number"
+                        },
+                        "forarmLengthInMeters": {
+                            "type": "number"
+                        },
+                        "bicepsCircumferenceRelaxedInMeters": {
+                            "type": "number"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Hearing": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "hearingAt500Hz": {
+                            "type": "integer"
+                        },
+                        "hearingAt4kHz": {
+                            "type": "integer"
+                        },
+                        "hearingAt8kHz": {
+                            "type": "integer"
+                        },
+                        "hearingAt2kHz": {
+                            "type": "integer"
+                        },
+                        "hearingAt1kHz": {
+                            "type": "integer"
+                        },
+                        "hearingAt250Hz": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "toe": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        },
+                        "flexion": {
+                            "$ref": "#/definitions/flexion"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Disability": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "affects": {
+                            "$ref": "#/definitions/AspectsEnum"
+                        },
+                        "description": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "flexion": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "minValue": {
+                            "type": "integer"
+                        },
+                        "maxValue": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "extension": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "maxValue": {
+                            "type": "integer"
+                        },
+                        "minValue": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "wrist": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "radialDeviation": {
+                            "type": "integer"
+                        },
+                        "urnalDeviation": {
+                            "type": "integer"
+                        },
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        },
+                        "knee": {
+                            "$ref": "#/definitions/knee"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "thigh": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "finger": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "extensionB": {
+                            "type": "integer"
+                        },
+                        "adductionA": {
+                            "type": "integer"
+                        },
+                        "hyperExtensionB": {
+                            "type": "integer"
+                        },
+                        "flexionA": {
+                            "type": "integer"
+                        },
+                        "flexionC": {
+                            "type": "integer"
+                        },
+                        "adductionB": {
+                            "type": "integer"
+                        },
+                        "hyperExtensionA": {
+                            "type": "integer"
+                        },
+                        "extensionA": {
+                            "type": "integer"
+                        },
+                        "abductionB": {
+                            "type": "integer"
+                        },
+                        "hyperExtensionC": {
+                            "type": "integer"
+                        },
+                        "flexionB": {
+                            "type": "integer"
+                        },
+                        "abductionA": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "shoulder": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "externalRotation": {
+                            "type": "integer"
+                        },
+                        "internalRotation": {
+                            "type": "integer"
+                        },
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        },
+                        "flexion": {
+                            "$ref": "#/definitions/flexion"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "hyperExtension": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "maxValue": {
+                            "type": "integer"
+                        },
+                        "minValue": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Anthropometric": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "sittingHeightInMeters": {
+                            "type": "number"
+                        },
+                        "headLengthInMeters": {
+                            "type": "number"
+                        },
+                        "weightInKg": {
+                            "type": "number"
+                        },
+                        "waistCircumferenceInMeters": {
+                            "type": "number"
+                        },
+                        "bideltoidBreadthInMeters": {
+                            "type": "number"
+                        },
+                        "headBreadthInMeters": {
+                            "type": "number"
+                        },
+                        "statureInMeters": {
+                            "type": "number"
+                        },
+                        "lowerLimbAnthropometric": {
+                            "$ref": "#/definitions/lowerLimbAnthropometric"
+                        },
+                        "upperLimbAnthropometric": {
+                            "$ref": "#/definitions/upperLimbAnthropometric"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "EmotionalIntelligence": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "selfAwareness": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "relationshipManagement": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "selfManagement": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "socialAwareness": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Attention": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "dividingAttention": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "sharingAttention": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "sustainingAttention": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "shiftingAttention": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Physiological State": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "temperature": {
+                            "type": "number"
+                        },
+                        "arousal": {
+                            "type": "boolean"
+                        },
+                        "bloodPressure": {
+                            "type": "integer"
+                        },
+                        "perspiration": {
+                            "type": "integer"
+                        },
+                        "nourishment": {
+                            "type": "integer"
+                        },
+                        "fatigue": {
+                            "type": "integer"
+                        },
+                        "heartbeat": {
+                            "type": "integer"
+                        },
+                        "injury": {
+                            "type": "boolean"
+                        },
+                        "pupilsDilation": {
+                            "type": "integer"
+                        },
+                        "respiration": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "lowerLimbAnthropometric": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "ankleHeightInMeters": {
+                            "type": "number"
+                        },
+                        "footBreadthInMeters": {
+                            "type": "number"
+                        },
+                        "kneeHeightInMeters": {
+                            "type": "number"
+                        },
+                        "buttockKneeInMeters": {
+                            "type": "number"
+                        },
+                        "hipBreadthInMeters": {
+                            "type": "number"
+                        },
+                        "footLengthInMeters": {
+                            "type": "number"
+                        },
+                        "calfCirumferenceInMeters": {
+                            "type": "number"
+                        },
+                        "tighCircumferenceInMeters": {
+                            "type": "number"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Motoric": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "handEyeCoordination": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "fingerPrecision": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "pinchGrip": {
+                            "type": "number"
+                        },
+                        "clenchGrip": {
+                            "type": "number"
+                        },
+                        "armPrecision": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "handPrecision": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "contactGrip": {
+                            "type": "number"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Prosody": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "vocalStress": {
+                            "type": "number"
+                        },
+                        "lipMovementCoordination": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "jawMovement": {
+                            "type": "number"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Speech": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Prosody": {
+                            "$ref": "#/definitions/Prosody"
+                        },
+                        "Phonation": {
+                            "$ref": "#/definitions/Phonation"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Neck": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "leftLateralFlexion": {
+                            "type": "integer"
+                        },
+                        "rightLateralRotation": {
+                            "type": "integer"
+                        },
+                        "rightLateralFlexion": {
+                            "type": "integer"
+                        },
+                        "leftLateralRotation": {
+                            "type": "integer"
+                        },
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "spinalColumn": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "rightLateralFlexion": {
+                            "type": "integer"
+                        },
+                        "leftLateralFlexion": {
+                            "type": "integer"
+                        },
+                        "leftLateralRotation": {
+                            "type": "integer"
+                        },
+                        "rightLateralRotation": {
+                            "type": "integer"
+                        },
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Memory": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "sensoryMemory": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "workingMemory": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "longTermMemory": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Accessibility": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Motoric": {
+                            "$ref": "#/definitions/Motoric"
+                        },
+                        "Sight": {
+                            "$ref": "#/definitions/Sight"
+                        },
+                        "Physiological State": {
+                            "$ref": "#/definitions/Physiological State"
+                        },
+                        "Disability": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Disability"
+                            }
+                        },
+                        "Mobility": {
+                            "$ref": "#/definitions/Mobility"
+                        },
+                        "Memory": {
+                            "$ref": "#/definitions/Memory"
+                        },
+                        "Hearing": {
+                            "$ref": "#/definitions/Hearing"
+                        },
+                        "Cognitive": {
+                            "$ref": "#/definitions/Cognitive"
+                        },
+                        "Speech": {
+                            "$ref": "#/definitions/Speech"
+                        },
+                        "Anthropometric": {
+                            "$ref": "#/definitions/Anthropometric"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Experience": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "endDate": {
+                            "type": "string"
+                        },
+                        "roleName": {
+                            "type": "string"
+                        },
+                        "companyName": {
+                            "type": "string"
+                        },
+                        "startDate": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Language": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "iso693_3": {
+                            "type": "string"
+                        },
+                        "level": {
+                            "$ref": "#/definitions/CEFR"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Skill": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "score": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Knowledge": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "score": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "Topic": {
+                            "$ref": "#/definitions/Topic"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Education": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "providedBy": {
+                            "type": "string"
+                        },
+                        "degreeType": {
+                            "$ref": "#/definitions/DegreeEnum"
+                        },
+                        "degreeName": {
+                            "type": "string"
+                        },
+                        "fieldOfDegree": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Topic": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Attitude": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Attitude"
+                            }
+                        },
+                        "Knowledge": {
+                            "$ref": "#/definitions/Knowledge"
+                        },
+                        "Interest": {
+                            "$ref": "#/definitions/Interest"
+                        },
+                        "Sport": {
+                            "$ref": "#/definitions/Sport"
+                        },
+                        "VideoGames": {
+                            "$ref": "#/definitions/VideoGames"
+                        },
+                        "Music": {
+                            "$ref": "#/definitions/Music"
+                        },
+                        "Other": {
+                            "$ref": "#/definitions/Other"
+                        },
+                        "Recreation": {
+                            "$ref": "#/definitions/Recreation"
+                        },
+                        "Science": {
+                            "$ref": "#/definitions/Science"
+                        },
+                        "Film": {
+                            "$ref": "#/definitions/Film"
+                        },
+                        "Environment": {
+                            "$ref": "#/definitions/Environment"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "MoodStatus": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "tense_to_relaxed": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "tired_to_energetic": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "bad_to_good": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Culture": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "temporalOrientation": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "collectivism_to_individualism": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "restrain_to_indulgence": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "uncertaintyAvoidance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "feminity_to_masculinity": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "powerDistance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "religion": {
+                            "$ref": "#/definitions/ReligionEnum"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "EmotionStatus": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "disgust": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "anxiety": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "anger": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "dread": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "shame": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "excitement": {
+                           "$ref": "#/definitions/Range"
+                        },
+                        "worry": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "boredom": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "fear": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "hate": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "joy": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "satisfaction": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "happiness": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "love": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "relief": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "hope": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "confusion": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "pride": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "sadness": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Preference": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Content": {
+                            "$ref": "#/definitions/Content"
+                        },
+                        "Interaction_Modality": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Interaction_Modality"
+                            }
+                        },
+                        "Design": {
+                            "$ref": "#/definitions/Design"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "VideoGames": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "genres": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/GameGenreEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Goal": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "deadline": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Interest": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Topic": {
+                            "$ref": "#/definitions/Topic"
+                        },
+                        "Hobby": {
+                            "$ref": "#/definitions/Hobby"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Personality": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "MotivationProfile": {
+                            "$ref": "#/definitions/MotivationProfile"
+                        },
+                        "Attitude": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Attitude"
+                            }
+                        },
+                        "Trait": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Trait"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Environment": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "topics": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/EnvironmentEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "User": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Goal": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Goal"
+                            }
+                        },
+                        "Competence": {
+                            "$ref": "#/definitions/Competence"
+                        },
+                        "MoodStatus": {
+                            "$ref": "#/definitions/MoodStatus"
+                        },
+                        "EmotionStatus": {
+                            "$ref": "#/definitions/EmotionStatus"
+                        },
+                        "Personality": {
+                            "$ref": "#/definitions/Personality"
+                        },
+                        "Preference": {
+                            "$ref": "#/definitions/Preference"
+                        },
+                        "Personal Information": {
+                            "$ref": "#/definitions/Personal Information"
+                        },
+                        "Accessibility": {
+                            "$ref": "#/definitions/Accessibility"
+                        },
+                        "Culture": {
+                            "$ref": "#/definitions/Culture"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Personal Information": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "gender": {
+                            "$ref": "#/definitions/GenderEnum"
+                        },
+                        "politicalBelief": {
+                            "$ref": "#/definitions/PoliticalEnum"
+                        },
+                        "nationality_iso3166": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "age": {
+                            "type": "integer"
+                        },
+                        "lastName": {
+                            "type": "string"
+                        },
+                        "sexuality": {
+                            "$ref": "#/definitions/SexualityEnum"
+                        },
+                        "address": {
+                            "type": "string"
+                        },
+                        "firstName": {
+                            "type": "string"
+                        },
+                        "Interest": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Interest"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Competence": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Knowledge": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Knowledge"
+                            }
+                        },
+                        "Language": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Language"
+                            }
+                        },
+                        "Education": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Education"
+                            }
+                        },
+                        "Skill": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Skill"
+                            }
+                        },
+                        "Experience": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Experience"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Recreation": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "types": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/RecreationEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Other": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "description": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Sport": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "disciplines": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/SportEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Item": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "preferenceScore": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Hobby": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Interest"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "weeklyTime": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Film": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "genres": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/FilmGenreEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Science": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "fields": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ScienceFieldEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Intraphysic_Self": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "securityImportance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "identityImportance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "masteryImportance": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Music": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "genres": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/MusicGenreEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Interaction_Modality": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Output_Modality": {
+                            "$ref": "#/definitions/Output_Modality"
+                        },
+                        "Input_Modality": {
+                            "$ref": "#/definitions/Input_Modality"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Design": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "textSize": {
+                            "type": "integer"
+                        },
+                        "colorScheme": {
+                            "type": "string"
+                        },
+                        "contentContrast": {
+                            "type": "integer"
+                        },
+                        "police": {
+                            "type": "string"
+                        },
+                        "brightness": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Content": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "PreferredLanguage": {
+                            "$ref": "#/definitions/PreferredLanguage"
+                        },
+                        "Item": {
+                            "$ref": "#/definitions/Item"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Input_Modality": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "$ref": "#/definitions/InputEnum"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "PreferredLanguage": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "style": {
+                            "$ref": "#/definitions/StylesEnum"
+                        },
+                        "iso639_1": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Output_Modality": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "$ref": "#/definitions/OutputEnum"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Attitude": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "negative_to_positive": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "Topic": {
+                            "$ref": "#/definitions/Topic"
+                        },
+                        "Bias": {
+                            "$ref": "#/definitions/Bias"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Characteristic": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "score": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "name": {
+                            "$ref": "#/definitions/CharacteristicsEnum"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Trait": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "score": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "Characteristic": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Characteristic"
+                            }
+                        },
+                        "MyersBriggsTypeInventory": {
+                            "$ref": "#/definitions/MyersBriggsTypeInventory"
+                        },
+                        "OtherTrait": {
+                            "$ref": "#/definitions/OtherTrait"
+                        },
+                        "Big_Five_Traits": {
+                            "$ref": "#/definitions/Big_Five_Traits"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Big_Five_Traits": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Trait"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "Neuroticism": {
+                            "$ref": "#/definitions/Neuroticism"
+                        },
+                        "Openness": {
+                            "$ref": "#/definitions/Openness"
+                        },
+                        "Conscientiousness": {
+                            "$ref": "#/definitions/Conscientiousness"
+                        },
+                        "Agreeableness": {
+                            "$ref": "#/definitions/Agreeableness"
+                        },
+                        "Extraversion": {
+                            "$ref": "#/definitions/Extraversion"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Extraversion": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Big_Five_Traits"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "Agreeableness": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Big_Five_Traits"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "Conscientiousness": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Big_Five_Traits"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "Openness": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Big_Five_Traits"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "Neuroticism": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Big_Five_Traits"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "MyersBriggsTypeInventory": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Trait"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "SensingToIntuition": {
+                            "$ref": "#/definitions/SensingToIntuition"
+                        },
+                        "JudgingToPerceiving": {
+                            "$ref": "#/definitions/JudgingToPerceiving"
+                        },
+                        "ExtraversionToIntroversion": {
+                            "$ref": "#/definitions/ExtraversionToIntroversion"
+                        },
+                        "ThinkingToFeeling": {
+                            "$ref": "#/definitions/ThinkingToFeeling"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "SensingToIntuition": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MyersBriggsTypeInventory"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "ThinkingToFeeling": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MyersBriggsTypeInventory"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "JudgingToPerceiving": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MyersBriggsTypeInventory"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "ExtraversionToIntroversion": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MyersBriggsTypeInventory"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "OtherTrait": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Trait"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Mobility": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "UpperLimp": {
+                            "$ref": "#/definitions/UpperLimp"
+                        },
+                        "spinalColumn": {
+                            "$ref": "#/definitions/spinalColumn"
+                        },
+                        "lowerLimb": {
+                            "$ref": "#/definitions/lowerLimb"
+                        },
+                        "Neck": {
+                            "$ref": "#/definitions/Neck"
+                        },
+                        "Gait": {
+                            "$ref": "#/definitions/Gait"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "MotivationProfile": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Interpersonal_Social_World": {
+                            "$ref": "#/definitions/Interpersonal_Social_World"
+                        },
+                        "Intraphysic_Self": {
+                            "$ref": "#/definitions/Intraphysic_Self"
+                        },
+                        "Instrumental_Material_World": {
+                            "$ref": "#/definitions/Instrumental_Material_World"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Bias": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Attitude"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "UpperLimp": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "outForce": {
+                            "type": "integer"
+                        },
+                        "pushForce": {
+                            "type": "integer"
+                        },
+                        "inForce": {
+                            "type": "integer"
+                        },
+                        "pullForce": {
+                            "type": "integer"
+                        },
+                        "elbowTorque": {
+                            "type": "integer"
+                        },
+                        "forearm": {
+                            "$ref": "#/definitions/forearm"
+                        },
+                        "shoulder": {
+                            "$ref": "#/definitions/shoulder"
+                        },
+                        "wrist": {
+                            "$ref": "#/definitions/wrist"
+                        },
+                        "elbow": {
+                            "$ref": "#/definitions/elbow"
+                        },
+                        "hand": {
+                            "$ref": "#/definitions/hand"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Instrumental_Material_World": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "engagementImportance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "achievementImportance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "empowerementImportance": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Gait": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "doubleSupport": {
+                            "type": "integer"
+                        },
+                        "gaitCycle": {
+                            "type": "integer"
+                        },
+                        "stepLengthInMeters": {
+                            "type": "number"
+                        },
+                        "velocity": {
+                            "type": "integer"
+                        },
+                        "strideLengthInMeters": {
+                            "type": "number"
+                        },
+                        "stepWidthInMeters": {
+                            "type": "number"
+                        },
+                        "cadence": {
+                            "type": "integer"
+                        },
+                        "stepAssymetry": {
+                            "type": "integer"
+                        },
+                        "weightShift": {
+                            "type": "integer"
+                        },
+                        "footContact": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Interpersonal_Social_World": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "esteemImportance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "belongingImportance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "nurturanceImportance": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Phonation": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "voicePitch": {
+                            "type": "number"
+                        },
+                        "syllableDuration": {
+                            "type": "number"
+                        },
+                        "fundamentalFrequency": {
+                            "type": "number"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "hip": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "internalRotation": {
+                            "type": "integer"
+                        },
+                        "extensionTorque": {
+                            "type": "integer"
+                        },
+                        "externalRotation": {
+                            "type": "integer"
+                        },
+                        "abduction": {
+                            "type": "integer"
+                        },
+                        "flexionTorque": {
+                            "type": "integer"
+                        },
+                        "adduction": {
+                            "type": "integer"
+                        },
+                        "flexion": {
+                            "$ref": "#/definitions/flexion"
+                        },
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "lowerLimb": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "ankleEversion": {
+                            "type": "integer"
+                        },
+                        "anklePlantarFlexion": {
+                            "type": "integer"
+                        },
+                        "ankleDorsiFlexion": {
+                            "type": "integer"
+                        },
+                        "toe": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/toe"
+                            }
+                        },
+                        "wrist": {
+                            "$ref": "#/definitions/wrist"
+                        },
+                        "hip": {
+                            "$ref": "#/definitions/hip"
+                        },
+                        "thigh": {
+                            "$ref": "#/definitions/thigh"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Cognitive": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "ICTAnxiousness": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "neuroCognitivePerformanceTest": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "ICTLiteracy": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "emotionalIntelligence": {
+                            "type": "integer"
+                        },
+                        "physiologicalArousal": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "visuospatialAbilities": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "languageProduction": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "languageReception": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "ProcessingSpeed": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "valence": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "understandingAbstractSigns": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "trailMakingTest": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "EmotionalIntelligence": {
+                            "$ref": "#/definitions/EmotionalIntelligence"
+                        },
+                        "Attention": {
+                            "$ref": "#/definitions/Attention"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        }
+    },
+    "definitions": {
+        "OutputEnum": {
+            "type": "string",
+            "enum": [
+                "audio",
+                "text",
+                "image",
+                "video"
+            ]
+        },
+        "MusicGenreEnum": {
+            "type": "string",
+            "enum": [
+                "Hymns",
+                "Karaoke",
+                "WesternSwing",
+                "Quartets",
+                "SymphonyOrchestras",
+                "Children",
+                "Opera",
+                "RaveCulture",
+                "Blues",
+                "Dance",
+                "Jewish",
+                "Celtic",
+                "HeavyMetal",
+                "Indian",
+                "Religion",
+                "Concerts",
+                "Psychedelic",
+                "ChoralMusic",
+                "Electronic",
+                "Reggae",
+                "Improvisation",
+                "Composers",
+                "Lyrics",
+                "WorldMusic",
+                "NewAge",
+                "Musicals",
+                "Country",
+                "Folk",
+                "Popular",
+                "Ragtime",
+                "Rap",
+                "Rhythm-n-Blues",
+                "HumorAndComedy",
+                "Classical",
+                "Hip-Hop",
+                "Jazz",
+                "MusicalInstruments",
+                "Rock",
+                "PunkRock"
+            ]
+        },
+        "TraitsEnum": {
+            "type": "string",
+            "enum": [
+                "Openminded",
+                "Agreeable",
+                "Perceiving",
+                "Judging",
+                "Controlled",
+                "Excessive",
+                "Feeling",
+                "Disagreeable",
+                "Intelligent",
+                "Pessimistic",
+                "Extravert",
+                "Introvert",
+                "Neurotic",
+                "Optimistic",
+                "Resilient",
+                "Indulgent",
+                "Closeminded",
+                "Tempered",
+                "Thinking",
+                "Sensing"
+            ]
+        },
+        "StylesEnum": {
+            "type": "string",
+            "enum": [
+                "formal",
+                "informal"
+            ]
+        },
+        "DegreeEnum": {
+            "type": "string",
+            "enum": [
+                "Doctorate's degree",
+                "Bachelor's degree",
+                "Certificate",
+                "Master's degree",
+                "High-school diploma"
+            ]
+        },
+        "RecreationEnum": {
+            "type": "string",
+            "enum": [
+                "Games",
+                "Collecting",
+                "RailroadModels",
+                "CardTricks",
+                "Pets",
+                "Fireworks",
+                "Cycling",
+                "JigsawPuzzles",
+                "Photography",
+                "Circus",
+                "Museums",
+                "Puppets",
+                "Radio",
+                "Gardening",
+                "Festivals",
+                "Aquariums",
+                "Beaches",
+                "Books",
+                "Juggling",
+                "BirdWatching",
+                "Humor",
+                "Fairs",
+                "Kites",
+                "Camping",
+                "Television",
+                "Rafting",
+                "WordGames",
+                "CrosswordPuzzles",
+                "Toys",
+                "Movies",
+                "Backpacking",
+                "Fortune-telling",
+                "Lotteries",
+                "Hiking",
+                "Gambling",
+                "Fishing",
+                "Hunting",
+                "MagicTricks",
+                "Crafts",
+                "Dance",
+                "Zoos",
+                "ArtGalleries"
+            ]
+        },
+        "ScienceFieldEnum": {
+            "type": "string",
+            "enum": [
+                "Inventions",
+                "Weather",
+                "Archaeology",
+                "Medicine",
+                "Plants",
+                "Ontologies",
+                "NobelPrizes",
+                "UbiquitousComputing",
+                "UserModeling",
+                "Taxonomy",
+                "Cloning",
+                "Genetics",
+                "Mathematics",
+                "Expeditions",
+                "Microorganisms",
+                "Zoology",
+                "Physics",
+                "HumanGenome",
+                "Scientists",
+                "Technology",
+                "NatureSounds",
+                "Standardization",
+                "Biology",
+                "Animals",
+                "Botany",
+                "Geography",
+                "Psychology",
+                "ComputerScience",
+                "NuclearEnergy",
+                "LifeSciences",
+                "Agriculture",
+                "Molecules",
+                "Geology",
+                "PhysicalSciences",
+                "SemanticWeb",
+                "Astronomy",
+                "Evolution",
+                "Anthropology",
+                "Chemistry",
+                "Environment"
+            ]
+        },
+        "InputEnum": {
+            "type": "string",
+            "enum": [
+                "text",
+                "voice",
+                "image",
+                "video",
+                "click"
+            ]
+        },
+        "SexualityEnum": {
+            "type": "string",
+            "enum": [
+                "Other",
+                "Heterosexual",
+                "Pansexual",
+                "Homosexual",
+                "Asexual",
+                "Bisexual"
+            ]
+        },
+        "CharacteristicsEnum": {
+            "type": "string",
+            "enum": [
+                "Warm",
+                "Quiet",
+                "Retiring",
+                "Anxious",
+                "Assertive",
+                "Imaginative",
+                "Helpful",
+                "Efficient",
+                "Loyal",
+                "Shy",
+                "Worrying",
+                "Stable",
+                "Dominant",
+                "Organised",
+                "Faultfinding",
+                "Moody",
+                "Thorough",
+                "Reserved",
+                "Kind",
+                "Calm",
+                "Talkative",
+                "Frivolous",
+                "Unfriendly",
+                "Sympathetic",
+                "Reliable",
+                "Careless",
+                "Tense",
+                "Inventive",
+                "Artistic",
+                "Cold",
+                "Cooperative",
+                "Commonplace",
+                "Disorderly",
+                "Contended"
+            ]
+        },
+        "AspectsEnum": {
+            "type": "string",
+            "enum": [
+                "Hearing",
+                "Social Relationships",
+                "Cognitive",
+                "Sight",
+                "Learning",
+                "Mental Health",
+                "Speech",
+                "Mobility",
+                "Memory"
+            ]
+        },
+        "ReligionEnum": {
+            "type": "string",
+            "enum": [
+                "Folk Religion",
+                "Buddhism",
+                "Hinduism",
+                "Christianity",
+                "Irreligion",
+                "Islam",
+                "Other"
+            ]
+        },
+        "GenderEnum": {
+            "type": "string",
+            "enum": [
+                "Male",
+                "Female",
+                "Other"
+            ]
+        },
+        "GameGenreEnum": {
+            "type": "string",
+            "enum": [
+                "Children",
+                "Adventure",
+                "Puzzle",
+                "Arcade",
+                "Fighting",
+                "BoardGames",
+                "Action",
+                "Simulation",
+                "Platform",
+                "Racing",
+                "Strategy",
+                "Sports",
+                "Shoot-Em-Up"
+            ]
+        },
+        "PoliticalEnum": {
+            "type": "string",
+            "enum": [
+                "Sligthly Liberal",
+                "Conservative",
+                "Neutral",
+                "Extremely Conservative",
+                "Liberal",
+                "Sligthly Conservative",
+                "Extremely Liberal"
+            ]
+        },
+        "EnvironmentEnum": {
+            "type": "string",
+            "enum": [
+                "RainForests",
+                "EnvironmentalEducation",
+                "Windpower",
+                "Weather",
+                "Fire",
+                "EndangeredSpecies",
+                "HazardousWastes",
+                "Protection",
+                "RenewableEnergy",
+                "Habitat",
+                "NuclearEnergy",
+                "SolarEnergy",
+                "DesertsAndDesertification",
+                "EnvironmentalHealth",
+                "BiologicalDiversity",
+                "Recycling",
+                "PestsAndDiseases",
+                "LightPollution",
+                "Wetlands",
+                "RadioactiveWaste",
+                "Disasters",
+                "Pesticides",
+                "CoralReefs",
+                "Littering",
+                "NoisePollution",
+                "ForestsAndDeforestation",
+                "RuralDevelopment",
+                "NaturalHistory",
+                "WildlifeConservation",
+                "Toxicology",
+                "PetroleumIndustry",
+                "Water",
+                "AirPollution",
+                "FuelCells",
+                "HazardousSubstances",
+                "EnergyConservation",
+                "Ponds",
+                "ClimaticChangesAndGlobalWarming",
+                "GovernmentPolicy",
+                "IndustrialSafety"
+            ]
+        },
+        "ColorBlindnessEnum": {
+            "type": "string",
+            "enum": [
+                "Achromatopsia",
+                "Tritanopia",
+                "Rod Monochromacy",
+                "Protanomaly",
+                "Protanopia",
+                "Deuteranopia",
+                "Tritanomaly",
+                "Deuteranomaly"
+            ]
+        },
+        "FilmGenreEnum": {
+            "type": "string",
+            "enum": [
+                "Drama",
+                "Adventure",
+                "Westerns",
+                "Comedy",
+                "Musicals",
+                "Documentary",
+                "Soaps",
+                "Animation",
+                "War",
+                "Classics",
+                "ScienceFiction",
+                "Horror",
+                "Action",
+                "Television",
+                "SportsAndExercise",
+                "Thriller",
+                "Independent",
+                "Romance",
+                "MartialArts",
+                "Crime",
+                "MusicAndConcert",
+                "Fantasy",
+                "Other",
+                "Mystery",
+                "ChildrenAndFamily"
+            ]
+        },
+        "SportEnum": {
+            "type": "string",
+            "enum": [
+                "IceSkating",
+                "Skydiving",
+                "Skateboarding",
+                "Olympics",
+                "WinterSports",
+                "AutomobileRacing",
+                "Climbing",
+                "Karting",
+                "Triathlon",
+                "Wrestling",
+                "Softball",
+                "Soccer",
+                "FieldHockey",
+                "Luge",
+                "Fencing",
+                "Boomerangs",
+                "FlyingDiscs",
+                "Motorcycles",
+                "Swimming",
+                "Surfing",
+                "Cycling",
+                "Football",
+                "Tennis",
+                "Boating",
+                "Baseball",
+                "Rodeos",
+                "Running",
+                "HorseRacing",
+                "Basketball",
+                "Gymnastics",
+                "Cricket",
+                "TableTennis",
+                "Chess",
+                "Boxing",
+                "Hockey",
+                "Sailing",
+                "Skating",
+                "ScubaDiving",
+                "Skiing",
+                "Athletics",
+                "Golf",
+                "Bowling",
+                "IceHockey",
+                "Volleyball",
+                "Badminton",
+                "Windsurfing"
+            ]
+        },
+        "CEFR": {
+            "type": "string",
+            "enum": [
+                "C2",
+                "B2",
+                "C1",
+                "A1",
+                "B1",
+                "A2"
+            ]
+        },
+        "forearm": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "pronation": {
+                            "type": "integer"
+                        },
+                        "supination": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "hand": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "supination": {
+                            "type": "integer"
+                        },
+                        "pronation": {
+                            "type": "integer"
+                        },
+                        "finger": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/finger"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "elbow": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "hyperExtension": {
+                            "$ref": "#/definitions/hyperExtension"
+                        },
+                        "flexion": {
+                            "$ref": "#/definitions/flexion"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Sight": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "spectralSensitivity": {
+                            "type": "number"
+                        },
+                        "visualAcuity": {
+                            "type": "number"
+                        },
+                        "blindSpotSize": {
+                            "type": "number"
+                        },
+                        "distorsion": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "blindSpotCount": {
+                            "type": "integer"
+                        },
+                        "blindSpotArea": {
+                            "type": "number"
+                        },
+                        "colorBlindness": {
+                            "$ref": "#/definitions/ColorBlindnessEnum"
+                        },
+                        "nearVisualAcuity": {
+                            "type": "number"
+                        },
+                        "contrastSensitivity": {
+                            "type": "number"
+                        },
+                        "blindSpotOpacity": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "glareSensitivity": {
+                            "type": "number"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "knee": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "flexionForce": {
+                            "type": "integer"
+                        },
+                        "extensionForce": {
+                            "type": "integer"
+                        },
+                        "hyperExtension": {
+                            "$ref": "#/definitions/hyperExtension"
+                        },
+                        "flexion": {
+                            "$ref": "#/definitions/flexion"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "upperLimbAnthropometric": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "bicepsCircumferenceFlexedInMeters": {
+                            "type": "number"
+                        },
+                        "shoulderElbowLengthInMeters": {
+                            "type": "number"
+                        },
+                        "forarmLengthInMeters": {
+                            "type": "number"
+                        },
+                        "bicepsCircumferenceRelaxedInMeters": {
+                            "type": "number"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Hearing": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "hearingAt500Hz": {
+                            "type": "integer"
+                        },
+                        "hearingAt4kHz": {
+                            "type": "integer"
+                        },
+                        "hearingAt8kHz": {
+                            "type": "integer"
+                        },
+                        "hearingAt2kHz": {
+                            "type": "integer"
+                        },
+                        "hearingAt1kHz": {
+                            "type": "integer"
+                        },
+                        "hearingAt250Hz": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "toe": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        },
+                        "flexion": {
+                            "$ref": "#/definitions/flexion"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Disability": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "affects": {
+                            "$ref": "#/definitions/AspectsEnum"
+                        },
+                        "description": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "flexion": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "minValue": {
+                            "type": "integer"
+                        },
+                        "maxValue": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "extension": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "maxValue": {
+                            "type": "integer"
+                        },
+                        "minValue": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "wrist": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "radialDeviation": {
+                            "type": "integer"
+                        },
+                        "urnalDeviation": {
+                            "type": "integer"
+                        },
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        },
+                        "knee": {
+                            "$ref": "#/definitions/knee"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "thigh": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "finger": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "extensionB": {
+                            "type": "integer"
+                        },
+                        "adductionA": {
+                            "type": "integer"
+                        },
+                        "hyperExtensionB": {
+                            "type": "integer"
+                        },
+                        "flexionA": {
+                            "type": "integer"
+                        },
+                        "flexionC": {
+                            "type": "integer"
+                        },
+                        "adductionB": {
+                            "type": "integer"
+                        },
+                        "hyperExtensionA": {
+                            "type": "integer"
+                        },
+                        "extensionA": {
+                            "type": "integer"
+                        },
+                        "abductionB": {
+                            "type": "integer"
+                        },
+                        "hyperExtensionC": {
+                            "type": "integer"
+                        },
+                        "flexionB": {
+                            "type": "integer"
+                        },
+                        "abductionA": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "shoulder": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "externalRotation": {
+                            "type": "integer"
+                        },
+                        "internalRotation": {
+                            "type": "integer"
+                        },
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        },
+                        "flexion": {
+                            "$ref": "#/definitions/flexion"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "hyperExtension": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "maxValue": {
+                            "type": "integer"
+                        },
+                        "minValue": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Anthropometric": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "sittingHeightInMeters": {
+                            "type": "number"
+                        },
+                        "headLengthInMeters": {
+                            "type": "number"
+                        },
+                        "weightInKg": {
+                            "type": "number"
+                        },
+                        "waistCircumferenceInMeters": {
+                            "type": "number"
+                        },
+                        "bideltoidBreadthInMeters": {
+                            "type": "number"
+                        },
+                        "headBreadthInMeters": {
+                            "type": "number"
+                        },
+                        "statureInMeters": {
+                            "type": "number"
+                        },
+                        "lowerLimbAnthropometric": {
+                            "$ref": "#/definitions/lowerLimbAnthropometric"
+                        },
+                        "upperLimbAnthropometric": {
+                            "$ref": "#/definitions/upperLimbAnthropometric"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "EmotionalIntelligence": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "selfAwareness": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "relationshipManagement": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "selfManagement": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "socialAwareness": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Attention": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "dividingAttention": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "sharingAttention": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "sustainingAttention": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "shiftingAttention": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Physiological State": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "temperature": {
+                            "type": "number"
+                        },
+                        "arousal": {
+                            "type": "boolean"
+                        },
+                        "bloodPressure": {
+                            "type": "integer"
+                        },
+                        "perspiration": {
+                            "type": "integer"
+                        },
+                        "nourishment": {
+                            "type": "integer"
+                        },
+                        "fatigue": {
+                            "type": "integer"
+                        },
+                        "heartbeat": {
+                            "type": "integer"
+                        },
+                        "injury": {
+                            "type": "boolean"
+                        },
+                        "pupilsDilation": {
+                            "type": "integer"
+                        },
+                        "respiration": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "lowerLimbAnthropometric": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "ankleHeightInMeters": {
+                            "type": "number"
+                        },
+                        "footBreadthInMeters": {
+                            "type": "number"
+                        },
+                        "kneeHeightInMeters": {
+                            "type": "number"
+                        },
+                        "buttockKneeInMeters": {
+                            "type": "number"
+                        },
+                        "hipBreadthInMeters": {
+                            "type": "number"
+                        },
+                        "footLengthInMeters": {
+                            "type": "number"
+                        },
+                        "calfCirumferenceInMeters": {
+                            "type": "number"
+                        },
+                        "tighCircumferenceInMeters": {
+                            "type": "number"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Motoric": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "handEyeCoordination": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "fingerPrecision": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "pinchGrip": {
+                            "type": "number"
+                        },
+                        "clenchGrip": {
+                            "type": "number"
+                        },
+                        "armPrecision": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "handPrecision": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "contactGrip": {
+                            "type": "number"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Prosody": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "vocalStress": {
+                            "type": "number"
+                        },
+                        "lipMovementCoordination": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "jawMovement": {
+                            "type": "number"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Speech": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Prosody": {
+                            "$ref": "#/definitions/Prosody"
+                        },
+                        "Phonation": {
+                            "$ref": "#/definitions/Phonation"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Neck": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "leftLateralFlexion": {
+                            "type": "integer"
+                        },
+                        "rightLateralRotation": {
+                            "type": "integer"
+                        },
+                        "rightLateralFlexion": {
+                            "type": "integer"
+                        },
+                        "leftLateralRotation": {
+                            "type": "integer"
+                        },
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "spinalColumn": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "rightLateralFlexion": {
+                            "type": "integer"
+                        },
+                        "leftLateralFlexion": {
+                            "type": "integer"
+                        },
+                        "leftLateralRotation": {
+                            "type": "integer"
+                        },
+                        "rightLateralRotation": {
+                            "type": "integer"
+                        },
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Memory": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "sensoryMemory": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "workingMemory": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "longTermMemory": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Accessibility": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Motoric": {
+                            "$ref": "#/definitions/Motoric"
+                        },
+                        "Sight": {
+                            "$ref": "#/definitions/Sight"
+                        },
+                        "Physiological State": {
+                            "$ref": "#/definitions/Physiological State"
+                        },
+                        "Disability": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Disability"
+                            }
+                        },
+                        "Mobility": {
+                            "$ref": "#/definitions/Mobility"
+                        },
+                        "Memory": {
+                            "$ref": "#/definitions/Memory"
+                        },
+                        "Hearing": {
+                            "$ref": "#/definitions/Hearing"
+                        },
+                        "Cognitive": {
+                            "$ref": "#/definitions/Cognitive"
+                        },
+                        "Speech": {
+                            "$ref": "#/definitions/Speech"
+                        },
+                        "Anthropometric": {
+                            "$ref": "#/definitions/Anthropometric"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Experience": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "endDate": {
+                            "type": "string"
+                        },
+                        "roleName": {
+                            "type": "string"
+                        },
+                        "companyName": {
+                            "type": "string"
+                        },
+                        "startDate": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Language": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "iso693_3": {
+                            "type": "string"
+                        },
+                        "level": {
+                            "$ref": "#/definitions/CEFR"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Skill": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "score": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Knowledge": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "score": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "Topic": {
+                            "$ref": "#/definitions/Topic"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Education": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "providedBy": {
+                            "type": "string"
+                        },
+                        "degreeType": {
+                            "$ref": "#/definitions/DegreeEnum"
+                        },
+                        "degreeName": {
+                            "type": "string"
+                        },
+                        "fieldOfDegree": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Topic": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                       
+                    },
+                    "Sport": {
+                        "$ref": "#/definitions/Sport"
+                    },
+                    "VideoGames": {
+                        "$ref": "#/definitions/VideoGames"
+                    },
+                    "Music": {
+                        "$ref": "#/definitions/Music"
+                    },
+                    "Other": {
+                        "$ref": "#/definitions/Other"
+                    },
+                    "Recreation": {
+                        "$ref": "#/definitions/Recreation"
+                    },
+                    "Science": {
+                        "$ref": "#/definitions/Science"
+                    },
+                    "Film": {
+                        "$ref": "#/definitions/Film"
+                    },
+                    "Environment": {
+                        "$ref": "#/definitions/Environment"
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "MoodStatus": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "tense_to_relaxed": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "tired_to_energetic": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "bad_to_good": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Culture": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "temporalOrientation": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "collectivism_to_individualism": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "restrain_to_indulgence": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "uncertaintyAvoidance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "feminity_to_masculinity": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "powerDistance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "religion": {
+                            "$ref": "#/definitions/ReligionEnum"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "EmotionStatus": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "disgust": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "anxiety": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "anger": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "dread": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "shame": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "excitement": {
+                           "$ref": "#/definitions/Range"
+                        },
+                        "worry": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "boredom": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "fear": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "hate": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "joy": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "satisfaction": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "happiness": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "love": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "relief": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "hope": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "confusion": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "pride": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "sadness": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Preference": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Content": {
+                            "$ref": "#/definitions/Content"
+                        },
+                        "Interaction_Modality": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Interaction_Modality"
+                            }
+                        },
+                        "Design": {
+                            "$ref": "#/definitions/Design"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "VideoGames": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "genres": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/GameGenreEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Goal": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "deadline": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Interest": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Topic": {
+                            "$ref": "#/definitions/Topic"
+                        }
+                    },
+                    "Hobby": {
+                        "$ref": "#/definitions/Hobby"
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Personality": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "MotivationProfile": {
+                            "$ref": "#/definitions/MotivationProfile"
+                        },
+                        "Attitude": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Attitude"
+                            }
+                        },
+                        "Trait": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Trait"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Environment": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "topics": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/EnvironmentEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "User": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Personal Information": {
+                            "$ref": "#/definitions/Personal Information"
+                        },
+                        "Competence": {
+                            "$ref": "#/definitions/Competence"
+                        },
+                        "Accessibility": {
+                            "$ref": "#/definitions/Accessibility"
+                        },
+                        "Culture": {
+                            "$ref": "#/definitions/Culture"
+                        },
+                        "MoodStatus": {
+                            "$ref": "#/definitions/MoodStatus"
+                        },
+                        "EmotionStatus": {
+                            "$ref": "#/definitions/EmotionStatus"
+                        },
+                        "Personality": {
+                            "$ref": "#/definitions/Personality"
+                        },
+                        "Preference": {
+                            "$ref": "#/definitions/Preference"
+                        },
+                        "Goal": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Goal"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Personal Information": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "firstName": {
+                            "type": "string"
+                        },
+                        "lastName": {
+                            "type": "string"
+                        },
+                        "age": {
+                            "type": "integer"
+                        },
+                        "gender": {
+                            "$ref": "#/definitions/GenderEnum"
+                        },
+                        "nationality_iso3166": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "address": {
+                            "type": "string"
+                        },
+                        "politicalBelief": {
+                            "$ref": "#/definitions/PoliticalEnum"
+                        },
+                        "sexuality": {
+                            "$ref": "#/definitions/SexualityEnum"
+                        },
+                        "Interest": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Interest"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Competence": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Knowledge": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Knowledge"
+                            }
+                        },
+                        "Language": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Language"
+                            }
+                        },
+                        "Education": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Education"
+                            }
+                        },
+                        "Skill": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Skill"
+                            }
+                        },
+                        "Experience": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Experience"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Recreation": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "types": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/RecreationEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Other": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "description": {
+                            "type": "string"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Sport": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "disciplines": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/SportEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Item": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "preferenceScore": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Hobby": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Interest"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "weeklyTime": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Film": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "genres": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/FilmGenreEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Science": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "fields": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ScienceFieldEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Intraphysic_Self": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "securityImportance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "identityImportance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "masteryImportance": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Music": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Topic"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "genres": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/MusicGenreEnum"
+                            }
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Interaction_Modality": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Output_Modality": {
+                            "$ref": "#/definitions/Output_Modality"
+                        },
+                        "Input_Modality": {
+                            "$ref": "#/definitions/Input_Modality"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Design": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "textSize": {
+                            "type": "integer"
+                        },
+                        "colorScheme": {
+                            "type": "string"
+                        },
+                        "contentContrast": {
+                            "type": "integer"
+                        },
+                        "police": {
+                            "type": "string"
+                        },
+                        "brightness": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Content": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "PreferredLanguage": {
+                            "$ref": "#/definitions/PreferredLanguage"
+                        },
+                        "Item": {
+                            "$ref": "#/definitions/Item"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Input_Modality": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "$ref": "#/definitions/InputEnum"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "PreferredLanguage": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "style": {
+                            "$ref": "#/definitions/StylesEnum"
+                        },
+                        "iso639_1": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Output_Modality": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "value": {
+                            "$ref": "#/definitions/OutputEnum"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Attitude": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "negative_to_positive": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "Topic": {
+                            "$ref": "#/definitions/Topic"
+                        }
+                    },
+                    "Bias": {
+                        "$ref": "#/definitions/Bias"
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Characteristic": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "score": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "name": {
+                            "$ref": "#/definitions/CharacteristicsEnum"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Trait": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "score": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "Characteristic": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Characteristic"
+                            }
+                        }
+                    },
+                    "MyersBriggsTypeInventory": {
+                        "$ref": "#/definitions/MyersBriggsTypeInventory"
+                    },
+                    "OtherTrait": {
+                        "$ref": "#/definitions/OtherTrait"
+                    },
+                    "Big_Five_Traits": {
+                        "$ref": "#/definitions/Big_Five_Traits"
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Big_Five_Traits": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Trait"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "Neuroticism": {
+                        "$ref": "#/definitions/Neuroticism"
+                    },
+                    "Openness": {
+                        "$ref": "#/definitions/Openness"
+                    },
+                    "Conscientiousness": {
+                        "$ref": "#/definitions/Conscientiousness"
+                    },
+                    "Agreeableness": {
+                        "$ref": "#/definitions/Agreeableness"
+                    },
+                    "Extraversion": {
+                        "$ref": "#/definitions/Extraversion"
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Extraversion": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Big_Five_Traits"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "Agreeableness": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Big_Five_Traits"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "Conscientiousness": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Big_Five_Traits"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "Openness": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Big_Five_Traits"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "Neuroticism": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Big_Five_Traits"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "MyersBriggsTypeInventory": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Trait"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "SensingToIntuition": {
+                        "$ref": "#/definitions/SensingToIntuition"
+                    },
+                    "JudgingToPerceiving": {
+                        "$ref": "#/definitions/JudgingToPerceiving"
+                    },
+                    "ExtraversionToIntroversion": {
+                        "$ref": "#/definitions/ExtraversionToIntroversion"
+                    },
+                    "ThinkingToFeeling": {
+                        "$ref": "#/definitions/ThinkingToFeeling"
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "SensingToIntuition": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MyersBriggsTypeInventory"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "ThinkingToFeeling": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MyersBriggsTypeInventory"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "JudgingToPerceiving": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MyersBriggsTypeInventory"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "ExtraversionToIntroversion": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/MyersBriggsTypeInventory"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "OtherTrait": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Trait"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Mobility": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "UpperLimp": {
+                            "$ref": "#/definitions/UpperLimp"
+                        },
+                        "spinalColumn": {
+                            "$ref": "#/definitions/spinalColumn"
+                        },
+                        "lowerLimb": {
+                            "$ref": "#/definitions/lowerLimb"
+                        },
+                        "Neck": {
+                            "$ref": "#/definitions/Neck"
+                        },
+                        "Gait": {
+                            "$ref": "#/definitions/Gait"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "MotivationProfile": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "Interpersonal_Social_World": {
+                            "$ref": "#/definitions/Interpersonal_Social_World"
+                        },
+                        "Intraphysic_Self": {
+                            "$ref": "#/definitions/Intraphysic_Self"
+                        },
+                        "Instrumental_Material_World": {
+                            "$ref": "#/definitions/Instrumental_Material_World"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Bias": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/Attitude"
+                },
+                {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
+            ]
+        },
+        "UpperLimp": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "outForce": {
+                            "type": "integer"
+                        },
+                        "pushForce": {
+                            "type": "integer"
+                        },
+                        "inForce": {
+                            "type": "integer"
+                        },
+                        "pullForce": {
+                            "type": "integer"
+                        },
+                        "elbowTorque": {
+                            "type": "integer"
+                        },
+                        "forearm": {
+                            "$ref": "#/definitions/forearm"
+                        },
+                        "shoulder": {
+                            "$ref": "#/definitions/shoulder"
+                        },
+                        "wrist": {
+                            "$ref": "#/definitions/wrist"
+                        },
+                        "elbow": {
+                            "$ref": "#/definitions/elbow"
+                        },
+                        "hand": {
+                            "$ref": "#/definitions/hand"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Instrumental_Material_World": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "engagementImportance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "achievementImportance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "empowerementImportance": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Gait": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "doubleSupport": {
+                            "type": "integer"
+                        },
+                        "gaitCycle": {
+                            "type": "integer"
+                        },
+                        "stepLengthInMeters": {
+                            "type": "number"
+                        },
+                        "velocity": {
+                            "type": "integer"
+                        },
+                        "strideLengthInMeters": {
+                            "type": "number"
+                        },
+                        "stepWidthInMeters": {
+                            "type": "number"
+                        },
+                        "cadence": {
+                            "type": "integer"
+                        },
+                        "stepAssymetry": {
+                            "type": "integer"
+                        },
+                        "weightShift": {
+                            "type": "integer"
+                        },
+                        "footContact": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Interpersonal_Social_World": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "esteemImportance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "belongingImportance": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "nurturanceImportance": {
+                            "$ref": "#/definitions/Range"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Phonation": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "voicePitch": {
+                            "type": "number"
+                        },
+                        "syllableDuration": {
+                            "type": "number"
+                        },
+                        "fundamentalFrequency": {
+                            "type": "number"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "hip": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "internalRotation": {
+                            "type": "integer"
+                        },
+                        "extensionTorque": {
+                            "type": "integer"
+                        },
+                        "externalRotation": {
+                            "type": "integer"
+                        },
+                        "abduction": {
+                            "type": "integer"
+                        },
+                        "flexionTorque": {
+                            "type": "integer"
+                        },
+                        "adduction": {
+                            "type": "integer"
+                        },
+                        "flexion": {
+                            "$ref": "#/definitions/flexion"
+                        },
+                        "extension": {
+                            "$ref": "#/definitions/extension"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "lowerLimb": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "ankleEversion": {
+                            "type": "integer"
+                        },
+                        "anklePlantarFlexion": {
+                            "type": "integer"
+                        },
+                        "ankleDorsiFlexion": {
+                            "type": "integer"
+                        },
+                        "toe": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/toe"
+                            }
+                        },
+                        "wrist": {
+                            "$ref": "#/definitions/wrist"
+                        },
+                        "hip": {
+                            "$ref": "#/definitions/hip"
+                        },
+                        "thigh": {
+                            "$ref": "#/definitions/thigh"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        },
+        "Range": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                }
+            },
+            "required": [
+                "value"
+            ]
+        },
+        "Cognitive": {
+            "allOf": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "ICTAnxiousness": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "neuroCognitivePerformanceTest": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "ICTLiteracy": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "emotionalIntelligence": {
+                            "type": "integer"
+                        },
+                        "physiologicalArousal": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "visuospatialAbilities": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "languageProduction": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "languageReception": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "ProcessingSpeed": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "valence": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "understandingAbstractSigns": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "trailMakingTest": {
+                            "$ref": "#/definitions/Range"
+                        },
+                        "EmotionalIntelligence": {
+                            "$ref": "#/definitions/EmotionalIntelligence"
+                        },
+                        "Attention": {
+                            "$ref": "#/definitions/Attention"
+                        }
+                    },
+                    "required": []
+                }
+            ]
+        }
+    }
+}

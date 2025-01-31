@@ -9,6 +9,7 @@ WORKDIR /app
 RUN pip install besser-bot-framework==1.5.0
 RUN pip install opencv-python==4.10.0.84
 RUN pip install httpx==0.27.0
+RUN pip install jsonschema==4.3.0
 RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
 
@@ -20,6 +21,7 @@ COPY . .
 # Replace the file
 COPY streamlit_ui.py /usr/local/lib/python3.11/site-packages/besser/bot/platforms/websocket/streamlit_ui/streamlit_ui.py
 COPY user_model_streamlit.py /usr/local/lib/python3.11/site-packages/besser/bot/platforms/websocket/streamlit_ui/user_model_streamlit.py
+COPY sidebar.py /usr/local/lib/python3.11/site-packages/besser/bot/platforms/websocket/streamlit_ui/sidebar.py
 COPY llm.py /usr/local/lib/python3.11/site-packages/besser/bot/nlp/llm/llm.py
 
 # Expose the port that the app runs on

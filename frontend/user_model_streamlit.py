@@ -1,709 +1,220 @@
 import streamlit as st
 import json
-import logging
 
-# Suppress Streamlit warnings
-logging.getLogger("streamlit").setLevel(logging.ERROR)
+json_schema = {}
 
-
-# Define your Streamlit app
-def user_model_forms():
-    st.title("Userr Model Streamlit App")
-
-    # Expandable Personal Information Section
-    with st.expander("Personal Information"):
-        st.subheader("Personal Information")
-        first_name = st.text_input("First Name")
-        last_name = st.text_input("Last Name")
-        age = st.number_input("Age", min_value=0)
-        gender = st.selectbox("Gender", ["Male", "Female", "Other"])
-
-        nationalities = [
-            "Afghan",
-            "Albanian",
-            "Algerian",
-            "American",
-            "Andorran",
-            "Angolan",
-            "Antiguans",
-            "Argentinean",
-            "Armenian",
-            "Australian",
-            "Austrian",
-            "Azerbaijani",
-            "Bahamian",
-            "Bahraini",
-            "Bangladeshi",
-            "Barbadian",
-            "Barbudans",
-            "Batswana",
-            "Belarusian",
-            "Belgian",
-            "Belizean",
-            "Beninese",
-            "Bhutanese",
-            "Bolivian",
-            "Bosnian",
-            "Brazilian",
-            "British",
-            "Bruneian",
-            "Bulgarian",
-            "Burkinabe",
-            "Burmese",
-            "Burundian",
-            "Cambodian",
-            "Cameroonian",
-            "Canadian",
-            "Cape Verdean",
-            "Central African",
-            "Chadian",
-            "Chilean",
-            "Chinese",
-            "Colombian",
-            "Comoran",
-            "Congolese",
-            "Costa Rican",
-            "Croatian",
-            "Cuban",
-            "Cypriot",
-            "Czech",
-            "Danish",
-            "Djibouti",
-            "Dominican",
-            "Dutch",
-            "East Timorese",
-            "Ecuadorean",
-            "Egyptian",
-            "Emirian",
-            "Equatorial Guinean",
-            "Eritrean",
-            "Estonian",
-            "Ethiopian",
-            "Fijian",
-            "Filipino",
-            "Finnish",
-            "French",
-            "Gabonese",
-            "Gambian",
-            "Georgian",
-            "German",
-            "Ghanaian",
-            "Greek",
-            "Grenadian",
-            "Guatemalan",
-            "Guinea-Bissauan",
-            "Guinean",
-            "Guyanese",
-            "Haitian",
-            "Herzegovinian",
-            "Honduran",
-            "Hungarian",
-            "I-Kiribati",
-            "Icelander",
-            "Indian",
-            "Indonesian",
-            "Iranian",
-            "Iraqi",
-            "Irish",
-            "Israeli",
-            "Italian",
-            "Ivorian",
-            "Jamaican",
-            "Japanese",
-            "Jordanian",
-            "Kazakhstani",
-            "Kenyan",
-            "Kittian and Nevisian",
-            "Kuwaiti",
-            "Kyrgyz",
-            "Laotian",
-            "Latvian",
-            "Lebanese",
-            "Liberian",
-            "Libyan",
-            "Liechtensteiner",
-            "Lithuanian",
-            "Luxembourger",
-            "Macedonian",
-            "Malagasy",
-            "Malawian",
-            "Malaysian",
-            "Maldivan",
-            "Malian",
-            "Maltese",
-            "Marshallese",
-            "Mauritanian",
-            "Mauritian",
-            "Mexican",
-            "Micronesian",
-            "Moldovan",
-            "Monacan",
-            "Mongolian",
-            "Moroccan",
-            "Mosotho",
-            "Motswana",
-            "Mozambican",
-            "Namibian",
-            "Nauruan",
-            "Nepalese",
-            "New Zealander",
-            "Nicaraguan",
-            "Nigerian",
-            "Nigerien",
-            "North Korean",
-            "Northern Irish",
-            "Norwegian",
-            "Omani",
-            "Pakistani",
-            "Palauan",
-            "Panamanian",
-            "Papua New Guinean",
-            "Paraguayan",
-            "Peruvian",
-            "Polish",
-            "Portuguese",
-            "Qatari",
-            "Romanian",
-            "Russian",
-            "Rwandan",
-            "Saint Lucian",
-            "Salvadoran",
-            "Samoan",
-            "San Marinese",
-            "Sao Tomean",
-            "Saudi",
-            "Scottish",
-            "Senegalese",
-            "Serbian",
-            "Seychellois",
-            "Sierra Leonean",
-            "Singaporean",
-            "Slovakian",
-            "Slovenian",
-            "Solomon Islander",
-            "Somali",
-            "South African",
-            "South Korean",
-            "Spanish",
-            "Sri Lankan",
-            "Sudanese",
-            "Surinamer",
-            "Swazi",
-            "Swedish",
-            "Swiss",
-            "Syrian",
-            "Taiwanese",
-            "Tajik",
-            "Tanzanian",
-            "Thai",
-            "Togolese",
-            "Tongan",
-            "Trinidadian or Tobagonian",
-            "Tunisian",
-            "Turkish",
-            "Tuvaluan",
-            "Ugandan",
-            "Ukrainian",
-            "Uruguayan",
-            "Uzbekistani",
-            "Venezuelan",
-            "Vietnamese",
-            "Welsh",
-            "Yemenite",
-            "Zambian",
-            "Zimbabwean",
-        ]
-
-        nationality = st.multiselect("Nationality", nationalities)
-        hobby = st.text_area("Hobby (comma separated)").split(",")
-        languages = [
-            "Afrikaans",
-            "Albanian",
-            "Amharic",
-            "Arabic",
-            "Armenian",
-            "Azerbaijani",
-            "Basque",
-            "Belarusian",
-            "Bengali",
-            "Bosnian",
-            "Bulgarian",
-            "Catalan",
-            "Cebuano",
-            "Chichewa",
-            "Chinese",
-            "Corsican",
-            "Croatian",
-            "Czech",
-            "Danish",
-            "Dutch",
-            "English",
-            "Esperanto",
-            "Estonian",
-            "Filipino",
-            "Finnish",
-            "French",
-            "Frisian",
-            "Galician",
-            "Georgian",
-            "German",
-            "Greek",
-            "Gujarati",
-            "Haitian Creole",
-            "Hausa",
-            "Hawaiian",
-            "Hebrew",
-            "Hindi",
-            "Hmong",
-            "Hungarian",
-            "Icelandic",
-            "Igbo",
-            "Indonesian",
-            "Irish",
-            "Italian",
-            "Japanese",
-            "Javanese",
-            "Kannada",
-            "Kazakh",
-            "Khmer",
-            "Kinyarwanda",
-            "Korean",
-            "Kurdish",
-            "Kyrgyz",
-            "Lao",
-            "Latin",
-            "Latvian",
-            "Lithuanian",
-            "Luxembourgish",
-            "Macedonian",
-            "Malagasy",
-            "Malay",
-            "Malayalam",
-            "Maltese",
-            "Maori",
-            "Marathi",
-            "Mongolian",
-            "Myanmar (Burmese)",
-            "Nepali",
-            "Norwegian",
-            "Odia (Oriya)",
-            "Pashto",
-            "Persian",
-            "Polish",
-            "Portuguese",
-            "Punjabi",
-            "Romanian",
-            "Russian",
-            "Samoan",
-            "Scots Gaelic",
-            "Serbian",
-            "Sesotho",
-            "Shona",
-            "Sindhi",
-            "Sinhala",
-            "Slovak",
-            "Slovenian",
-            "Somali",
-            "Spanish",
-            "Sundanese",
-            "Swahili",
-            "Swedish",
-            "Tajik",
-            "Tamil",
-            "Tatar",
-            "Telugu",
-            "Thai",
-            "Turkish",
-            "Turkmen",
-            "Ukrainian",
-            "Urdu",
-            "Uyghur",
-            "Uzbek",
-            "Vietnamese",
-            "Welsh",
-            "Xhosa",
-            "Yiddish",
-            "Yoruba",
-            "Zulu",
-        ]
-
-        if "languages" not in st.session_state:
-            st.session_state.languages = []
-
-        # Display added languages
-        for idx, lang in enumerate(st.session_state.languages):
-            st.text(f"Language {idx + 1}: {lang['value']} ({lang['level']})")
-            if st.button(f"Remove Language {idx + 1}", key=f"remove_language_{idx}"):
-                st.session_state.languages.pop(idx)
-                st.rerun()
-
-        # Form to add new languages
-        with st.form("add_language"):
-            language = st.selectbox(
-                "Select Spoken Language", [None] + languages, key="new_language"
-            )
-            level = st.selectbox(
-                "Select Proficiency Level",
-                ["A1", "A2", "B1", "B2", "C1", "C2"],
-                key="new_level",
-            )
-            submitted = st.form_submit_button("Add Language")
-
-            if submitted and language:
-                st.session_state.languages.append({"value": language, "level": level})
-                st.rerun()
-
-        address = st.text_area("Address (comma separated geolocations)").split(",")
-
-        interests_data = {
-            "Film": [
-                "Action",
-                "Adventure",
-                "Animation",
-                "ChildrenAndFamily",
-                "Classics",
-                "Comedy",
-                "Crime",
-                "Documentary",
-                "Drama",
-                "Fantasy",
-                "Foreign",
-                "Horror",
-                "Independent",
-                "MartialArts",
-                "MusicAndConcert",
-                "Musicals",
-                "Mystery",
-                "Romance",
-                "ScienceFiction",
-                "Soaps",
-                "SportsAndExercise",
-                "Television",
-                "Thriller",
-                "War",
-                "Westerns",
-                "Other",
-            ],
-            "Music": [
-                "Blues",
-                "Celtic",
-                "Children",
-                "ChoralMusic",
-                "Classical",
-                "Composers",
-                "Concerts",
-                "Country",
-                "Dance",
-                "Electronic",
-                "Folk",
-                "HeavyMetal",
-                "Hip-Hop",
-                "HumorAndComedy",
-                "Hymns",
-                "Improvisation",
-                "Indian",
-                "Jazz",
-                "Jewish",
-                "Karaoke",
-                "Lyrics",
-                "MusicalInstruments",
-                "Musicals",
-                "NewAge",
-                "Opera",
-                "Popular",
-                "Psychedelic",
-                "PunkRock",
-                "Quartets",
-                "Ragtime",
-                "Rap",
-                "RaveCulture",
-                "Reggae",
-                "Religion",
-                "Rhythm-n-Blues",
-                "Rock",
-                "SymphonyOrchestras",
-                "WesternSwing",
-                "WorldMusic",
-            ],
-            "Sports": [
-                "Athletics",
-                "AutomobileRacing",
-                "Badminton",
-                "Baseball",
-                "Basketball",
-                "Boating",
-                "Boomerangs",
-                "Bowling",
-                "Boxing",
-                "Chess",
-                "Climbing",
-                "Cricket",
-                "Cycling",
-                "Fencing",
-                "FieldHockey",
-                "FlyingDiscs",
-                "Football",
-                "Golf",
-                "Gymnastics",
-                "Hockey",
-                "HorseRacing",
-                "IceHockey",
-                "IceSkating",
-                "Karting",
-                "Luge",
-                "Motorcycles",
-                "Olympics",
-                "Rodeos",
-                "Running",
-                "Sailing",
-                "ScubaDiving",
-                "Skateboarding",
-                "Skydiving",
-                "Skating",
-                "Skiing",
-                "Snowboarding",
-                "Soccer",
-                "Softball",
-                "Surfing",
-                "Swimming",
-                "TableTennis",
-                "Tennis",
-                "Triathlon",
-                "Volleyball",
-                "Windsurfing",
-                "WinterSports",
-                "Wrestling",
-            ],
-            "Recreation": [
-                "Aquariums",
-                "ArtGalleries",
-                "Backpacking",
-                "Beaches",
-                "Bicycling",
-                "BirdWatching",
-                "Books",
-                "Camping",
-                "CardTricks",
-                "Circus",
-                "Collecting",
-                "Crafts",
-                "CrosswordPuzzles",
-                "Dance",
-                "Fairs",
-                "Festivals",
-                "Fireworks",
-                "Fishing",
-                "Fortune-telling",
-                "Gambling",
-                "Games",
-                "Gardening",
-                "Hiking",
-                "Humor",
-                "Hunting",
-                "JigsawPuzzles",
-                "Juggling",
-                "Kites",
-                "Lotteries",
-                "MagicTricks",
-                "Movies",
-                "Museums",
-                "Pets",
-                "Photography",
-                "Puppets",
-                "Rafting",
-                "Radio",
-                "RailroadModels",
-                "Television",
-                "Toys",
-                "Travel",
-                "WordGames",
-                "Zoos",
-            ],
-            "EnvironmentalTopics": [
-                "AirPollution",
-                "BiologicalDiversity",
-                "ClimaticChangesAndGlobalWarming",
-                "CoralReefs",
-                "DesertsAndDesertification",
-                "Disasters",
-                "EndangeredSpecies",
-                "EnergyConservation",
-                "EnvironmentalEducation",
-                "EnvironmentalHealth",
-                "Fire",
-                "ForestsAndDeforestation",
-                "FuelCells",
-                "GovernmentalPolicy",
-                "Habitat",
-                "HazardousSubstances",
-                "HazardousWastes",
-                "IndustrialSafety",
-                "LightPollution",
-                "Littering",
-                "NaturalHistory",
-                "NoisePollution",
-                "NuclearEnergy",
-                "Pesticides",
-                "PestsAndDiseases",
-                "PetroleumIndustry",
-                "Ponds",
-                "Protection",
-                "RadioactiveWaste",
-                "RainForests",
-                "Recycling",
-                "RenewableEnergy",
-                "RuralDevelopment",
-                "SolarEnergy",
-                "Toxicology",
-                "Water",
-                "Weather",
-                "Wetlands",
-                "WildlifeConservation",
-                "WindPower",
-            ],
-            "Science": [
-                "Agriculture",
-                "Animals",
-                "Anthropology",
-                "Archaeology",
-                "Astronomy",
-                "Biology",
-                "Botany",
-                "Chemistry",
-                "Cloning",
-                "ComputerScience",
-                "Environment",
-                "Evolution",
-                "Expeditions",
-                "Genetics",
-                "Geography",
-                "Geology",
-                "HumanGenome",
-                "Inventions",
-                "LifeSciences",
-                "Mathematics",
-                "Medicine",
-                "Microorganisms",
-                "Molecules",
-                "NatureSounds",
-                "NobelPrizes",
-                "NuclearEnergy",
-                "Ontologies",
-                "PhysicalSciences",
-                "Physics",
-                "Plants",
-                "Psychology",
-                "Scientists",
-                "SemanticWeb",
-                "Standardization",
-                "Taxonomy",
-                "Technology",
-                "UbiquitousComputing",
-                "UserModeling",
-                "Weather",
-                "Zoology",
-            ],
-            "PC-Games": [
-                "Adventure",
-                "Action",
-                "Arcade",
-                "BoardGames",
-                "Children",
-                "Fighting",
-                "Platform",
-                "Puzzle",
-                "Racing",
-                "Shoot-Em-Up",
-                "Simulation",
-                "Sports",
-                "Strategy",
-            ],
-            # Add other categories here...
-        }
-        # Initialize session state for interests
-        if "selected_interests" not in st.session_state:
-            st.session_state.selected_interests = []
-        st.subheader("Interests")
-
-        # Select an interest category
-        category = st.selectbox("Select Interest Category", [None] + list(interests_data.keys()), key="interest_category")
-
-        if category:
-            # Select interests within the chosen category
-            options = interests_data[category]
-            selected = st.multiselect(f"Select {category} Interests", options, key="interest_selection")
+with open("json_schema.json", "r") as file:
+    json_schema = json.load(file)
+# Function to render forms dynamically
+def render_form(schema, data_key=None):
+    if "type" not in schema:
+        return st.error(data_key)
+    elif "type" in schema and schema["type"] == "object":
+        for key, value in schema["properties"].items():
             
-            if st.button("Add Interests"):
-                for interest in selected:
-                    if {"category": category, "interest": interest} not in st.session_state.selected_interests:
-                        st.session_state.selected_interests.append({"category": category, "interest": interest})
-                st.success(f"Added {len(selected)} interests.")
+            if "$ref" in value:
+                # If it's a reference, create a nested form
+                
+                ref_name = value["$ref"].split("/")[-1]
+                if "bility" in data_key:
+                    print("we are in ")
+                    print(key)
+                    print(value)
+                    print(ref_name)
+                if ref_name == "Range":
+                    name = f"{data_key}_{key}" if data_key else key
+                    st.slider(f"{key}", min_value=0, max_value=100, value=-1, key=name)
+                else:
+                    
+                    if "enum" in json_schema["definitions"][ref_name]:
+                        st.selectbox(
+                            key,
+                            ["Select an option"] + json_schema["definitions"][ref_name]["enum"],
+                            key=f"{data_key}_{key}"
+                        )
+                    else:
+                        if ref_name not in st.session_state.visited_objects:
+                            st.session_state.visited_objects.append(ref_name)
+                            st.markdown(f"##### {key.capitalize()}")
+                            name = f"{data_key}_{key}" if data_key else key
+                            render_form(json_schema["definitions"][ref_name]["allOf"][0], name)
+                    
+            elif value["type"] == "string":
+                st.text_input(f"{key.capitalize()}:", key=f"{data_key}_{key}")
+            elif value["type"] == "integer":
+                min_val = value.get("minimum", -1)
+                max_val = value.get("maximum", 100)
+                st.number_input(
+                    f"{key.capitalize()}:", 
+                    min_value=min_val, 
+                    max_value=max_val, 
+                    key=f"{data_key}_{key}"
+                )
+            elif value["type"] == "array":
+                st.markdown(f"#### {key.capitalize()}")
+                items = value.get("items", {})
+                if "$ref" in items:
+                    ref_name = items["$ref"].split("/")[-1]
+                    if ref_name not in st.session_state.visited_objects:
+                        st.markdown(f"Array of {ref_name}")
+                        name = f"{data_key}_{key}" if data_key else key
+                        if name not in st.session_state.arrays:
+                            st.session_state.arrays[name] = []
+                        for idx, item in enumerate(st.session_state.arrays.get(name)):
+                            st.text(f"{ref_name} {idx + 1}: {item}")
+                            if st.button(
+                                f"Remove {ref_name} {idx + 1}", key=f"{ref_name}_{idx}"
+                            ):
+                                st.session_state.arrays[name].pop(idx)
+                                st.rerun()
+                        render_form(json_schema["definitions"][ref_name]["allOf"][0], name)
+                        if st.button(f"Add {ref_name}", key=name):
+                            new_object = {}
+                            for item in json_schema["definitions"][ref_name]["allOf"][0]["properties"]:
+                                if st.session_state.get(name+"_"+item) not in ["", "Select an option", -1]:
+                                    new_object[item] = st.session_state.get(name+"_"+item)
+                            st.markdown(new_object)
+                            st.session_state.arrays[name].append(new_object)
+                            st.rerun()
+                                
+                                
+                else:
+                    st.text_area(f"{key.capitalize()} (Array Items):", key=f"{data_key}_{key}")
+    elif schema["type"] == "array":
+        st.markdown(f"#### {data_key.capitalize()}")
+        items = schema.get("items", {})
+        if "$ref" in items:  
+            ref_name = items["$ref"].split("/")[-1]
+            if ref_name == "Range":
+                name = data_key
+                st.slider("Select a value", min_value=0, max_value=100, value=-1, key=name)
+            else:
+                if ref_name not in st.session_state.visited_objects:
+                    st.markdown(f"Array of {ref_name}")
+                    name = data_key
+                    if name not in st.session_state.arrays:
+                        st.session_state.arrays[name] = []
+                    for idx, item in enumerate(st.session_state.arrays.get(name)):
+                        st.text(f"{ref_name} {idx + 1}: {item}")
+                        if st.button(
+                            f"Remove {ref_name} {idx + 1}", key=f"{ref_name}_{idx}"
+                        ):
+                            st.session_state.arrays[name].pop(idx)
+                            st.rerun()
+                    render_form(json_schema["definitions"][ref_name]["allOf"][0], name)
+                    if st.button(f"Add {ref_name}"):
+                        new_object = {}
+                        for item in json_schema["definitions"][ref_name]["allOf"][0]["properties"]:
+                            if st.session_state.get(name+"_"+item) not in ["", "Select an option", -1]:
+                                new_object[item] = st.session_state.get(name+"_"+item)
+                        st.markdown(new_object)
+                        st.session_state.arrays[name].append(new_object)
+                        st.rerun()
+    else:
+        st.error(f"Unsupported type: {schema['type']}")
 
-        # Display selected interests
-        if st.session_state.selected_interests:
-            st.write("### Selected Interests")
-            indices_to_remove = []
-            for idx, interest in enumerate(st.session_state.selected_interests):
-                col1, col2 = st.columns([6, 1])
-                with col1:
-                    st.write(f"{idx + 1}. {interest['category']} - {interest['interest']}")
-                with col2:
-                    if st.button("Remove", key=f"remove_interest_{idx}"):
-                        indices_to_remove.append(idx)
 
-            # Remove items after iterating to avoid affecting the list during iteration
-            if indices_to_remove:
-                for idx in sorted(indices_to_remove, reverse=True):
-                    st.session_state.selected_interests.pop(idx)
-                st.success("Selected interest(s) removed.")
+# Function to extract user input based on schema
+def extract_user_data(schema, data_key=None):
+    user_data = {}
 
-    # Expandable Accessibility Section
-    with st.expander("Accessibility"):
-        st.subheader("Accessibility")
-        if "disabilities" not in st.session_state:
-            st.session_state.disabilities = []
+    if "type" not in schema:
+        return user_data
+    elif "type" in schema and schema["type"] == "object":
+        for key, value in schema["properties"].items():
 
-        for idx, disability in enumerate(st.session_state.disabilities):
-            st.text(
-                f"Disability {idx + 1}: {disability['name']}"
-            )
-            if st.button(
-                f"Remove Disability {idx + 1}", key=f"remove_disability_{idx}"
-            ):
-                st.session_state.disabilities.pop(idx)
-                st.rerun()
-
-        with st.form("add_disability"):
-            name = st.text_input("Disability Name", key="new_disability_name")
-            description = st.text_input("Disability Description", key="new_disability_description")
-            #affects = st.text_area(
-            #    "Aspects Affected (comma separated)", key="new_disability_affects"
-            #).split(",")
-            submitted = st.form_submit_button("Add Disability")
-            if submitted:
-                st.session_state.disabilities.append({"name": name, "description": description})
-                st.rerun()
-
-    user_data = {
-        "first_name": first_name,
-        "last_name": last_name,
-        "age": age,
-        "gender": gender,
-        "nationality": nationality,
-        "hobby": hobby,
-        "known_languages": st.session_state.languages,
-        "disabilities": st.session_state.disabilities,
-        "address": address,
-        "interests": st.session_state.selected_interests
-    }
-
-    if st.button("Save and start bot"):
-        with open("user_model.json", "w") as f:
-            json.dump(user_data, f, indent=4)
-        st.success("User data saved to user_data.json")
-        st.session_state['user_model_saved'] = True
-        st.rerun()
+            unique_key = f"{data_key}_{key}" if data_key else key
+            if "$ref" in value:
+                
+                if "Range" in value["$ref"]:
+                    user_data[key] = st.session_state.get(unique_key)
+                
+                else:
+                    # If it's a reference, recurse into the referenced schema
+                    ref_name = value["$ref"].split("/")[-1]
+                    if "allOf" in json_schema["definitions"][ref_name]:
+                        user_data[key] = extract_user_data(json_schema["definitions"][ref_name]["allOf"][0], unique_key)
+                    elif "enum" in json_schema["definitions"][ref_name]:
+                        user_data[key] = st.session_state.get(unique_key)
+                    else:
+                        nothing = "dldl"
+                    
+                    
+            elif value["type"] == "string":
+                user_data[key] = st.session_state.get(unique_key)
+            elif value["type"] == "integer":
+                if "culture" in unique_key:
+                    st.error(data_key)
+                user_data[key] = st.session_state.get(unique_key, -1)
+            elif value["type"] == "array":
+                user_data[key] = st.session_state.arrays.get(unique_key, [])
+    elif schema["type"] == "array":
+        user_data = st.session_state.arrays[unique_key]
+    return user_data
 
 
-#if __name__ == "__main__":
-   # main()
+
+
+def clean_json(obj):
+    if isinstance(obj, dict):
+        # Recursively clean dictionary values
+        cleaned_dict = {
+            k: clean_json(v)
+            for k, v in obj.items()
+            if clean_json(v) not in ["", "Select an option", -1, [], None]  # Ensure values are cleaned
+        }
+        # Return None if the dictionary is empty after cleaning
+        return cleaned_dict if cleaned_dict else None
+
+    elif isinstance(obj, list):
+        # Recursively clean each item in the list
+        cleaned_list = [clean_json(item) for item in obj]
+        # Remove None values and empty dictionaries from the list
+        cleaned_list = [item for item in cleaned_list if item not in ["", "Select an option", -1, [], None]]
+        return cleaned_list if cleaned_list else None
+
+    else:
+        # Return None for values that should be removed
+        return None if obj in ["", "Select an option", -1, [], None] else obj
+
+def user_model_forms():
+    # Load the JSON schema
+    json_schema = {}
+
+    with open("json_schema.json", "r") as file:
+        json_schema = json.load(file)
+
+    st.session_state.visited_objects = []
+    if "arrays" not in st.session_state:
+        st.session_state.arrays = {}
+    # Main Streamlit app
+    st.title("User Profile Editor")
+
+    # Render the form
+    user_schema = json_schema["definitions"]["User"]["allOf"][0]
+    for category, category_schema in user_schema["properties"].items():
+        with st.expander(category, expanded=False):
+            if "$ref" in category_schema:
+                ref_name = category_schema["$ref"].split("/")[-1]
+                st.markdown(f"### Editing: {category}")
+                render_form(json_schema["definitions"][ref_name]["allOf"][0], ref_name)
+            else:
+                render_form(category_schema, category)
+    # Save button
+    if st.button("Save JSON"):
+        # Extract user data
+        user_data = {}
+        user_data["User"] = extract_user_data(user_schema)
+        user_data = clean_json(user_data)
+        if not user_data:
+            st.error("Please fill in some data before saving.")
+        else:
+            # user_data = clean_json(user_data)
+            # Save the data to a file
+            with open("user_model.json", "w") as f:
+                json.dump(user_data, f, indent=4)
+        
+            st.success("JSON data has been saved as user_data.json")
+            st.json(user_data)  # Optionally display the JSON data in the app
+            st.session_state['user_model_editor'] = False
+            st.rerun()
