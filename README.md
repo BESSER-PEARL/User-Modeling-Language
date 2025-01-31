@@ -17,3 +17,9 @@ The metamodel consists of the following dimension categories:
 - [MoodStatus](metamodel/MoodStatus/)
 - [EmotionStatus](metamodel/EmotionStatus/)
 - [Preference](metamodel/Preference/)
+
+
+## References
+The modeling language was mainly created based on the results from a systematic literature review on user modeling in model-driven engineering: [User Modeling in Model-Driven Engineering: A Systematic Literature Review](https://arxiv.org/abs/2412.15871).
+
+A concrete mapping of user dimension to reference is available in the individual folders of the dimension categories. 
