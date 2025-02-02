@@ -19,6 +19,11 @@ The metamodel consists of the following dimension categories:
 - [Preference](metamodel/Preference/)
 
 
+## Running the profiled editor frontend and the personalized conversational agent
+
+Information on starting the provided application is available in the [frontend's folder](frontend/).
+
+
 ## References
 The modeling language was mainly created based on the results from a systematic literature review on user modeling in model-driven engineering: [User Modeling in Model-Driven Engineering: A Systematic Literature Review](https://arxiv.org/abs/2412.15871).
 
