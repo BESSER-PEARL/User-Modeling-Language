@@ -6,8 +6,8 @@ Accessibility refers to the accessibility needs of the user and everything relat
 
 
 
-| Dimension            | Explanation |
-|---------------------|-------------|
+| Dimension            | Explanation | Reference |
+|---------------------|-------------|-----------|
 | Anthropometric| Describes the user’s body measurements and proportions, such as height, weight, and limb dimensions, which may influence their accessibility needs (e.g., reachability, ergonomics). | [22] |
 | Speech | Represents attributes relating to the user’s ability to produce and articulate speech. | [22]|
 | Hearing | Represents attributes relating to the user's hearling levels at different frequencies  |[11] [22]|
