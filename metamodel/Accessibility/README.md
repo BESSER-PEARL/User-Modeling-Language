@@ -6,21 +6,6 @@ Accessibility refers to the accessibility needs of the user and everything relat
 
 
 
-
-| Dimension   | Explanation                                   | Reference(s) Number      |
-|------------|------------------------------------------------|--------------------------|
-| firstName & lastName | First and last name(s) of the user. |      [2] [3] [4] [5] [9] [10] [12] [13] [16] [18] [19] [21] [22]|
-| age  | Age of the user. |    [4] [11] [12] [14] [18] [27]   |
-| nationality_iso3166  | Nationalities of the user using the iso3166 country codes.|  [14] [18]    |
-| address  | Living address of the user. |   [4] [5] [15]    |
-| gender  | Gender the user identifies themselves with. | [4] [5] [11] [12] [14] [16] [22] [24]   |
-| sexuality  | Sexuality of the user. |    [29]    |
-| politicalBelief  | Political beliefs of user, ranging from strongly liberal (progressive policies, government intervention) to strongly conservative (traditional values, limited government). |     [29]   |
-| interest | Topic(s) that user engages in activity with | [14] [28] |
-| hobby | Similar to interest but with a more recurrent and dedicated engagement | [14] [28] |
-
-
-
 | Dimension            | Explanation |
 |---------------------|-------------|
 | Anthropometric| Describes the user’s body measurements and proportions, such as height, weight, and limb dimensions, which may influence their accessibility needs (e.g., reachability, ergonomics). | [22] |
