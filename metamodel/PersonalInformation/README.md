@@ -15,9 +15,9 @@ Personal information describes typical information a user would enter on a profi
 | gender  | Gender the user identifies themselves with. | [4] [5] [11] [12] [14] [16] [22] [24]   |
 | sexuality  | Sexuality of the user. |    [29]    |
 | politicalBelief  | Political beliefs of user, ranging from strongly liberal (progressive policies, government intervention) to strongly conservative (traditional values, limited government). |     [29]   |
-| interest | Topic(s) that user engages in activity with | [14] [28] |
+| interest | Reflects a user's interest or activity related to a Topic(s). | [14] [28] |
 | hobby | Similar to interest but with a more recurrent and dedicated engagement | [14] [28] |
-
+| topic | A list of Topic(s). | [28] |
 
 ## References from SLR
 
